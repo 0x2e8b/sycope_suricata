@@ -1,7 +1,8 @@
 {
     "sycope_host": "",
     "sycope_login": "admin",
-    "sycope_pass": "", 
+    "sycope_pass": "",
+    "index_name": "suricata",
     "suricata_eve_json_path": "/var/log/suricata/eve.json",
     "last_timestamp_file": "last_timestamp.txt",
     "event_types": ["anomaly", "alert"],
