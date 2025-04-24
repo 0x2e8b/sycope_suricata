@@ -8,16 +8,16 @@ import logging
 import requests
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
-# — Wyłącz warningi SSL dla self-signed certs —
+# --- Disable SSL warnings (self-signed certs) ---
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
-# — Logging —
+# --- Logging ---
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s %(levelname)s %(message)s"
 )
 
-# — Załaduj config.json —
+# --- Load config.json ---
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 cfg = json.load(open(os.path.join(SCRIPT_DIR, "config.json")))
 
@@ -35,35 +35,35 @@ def main():
     r = session.post(f"{HOST}{API_BASE}/login",
                      json={"username": LOGIN, "password": PASSWORD})
     if r.status_code != 200:
-        logging.error(f"Logowanie nie powiodło się: {r.status_code}")
+        logging.error(f"Login failed: {r.status_code}")
         sys.exit(1)
-    logging.info("Zalogowano do Sycope API")
+    logging.info("Logged in to Sycope API")
 
-    # CSRF
+    # 2. CSRF token handling
     csrf = session.cookies.get("XSRF-TOKEN")
     if csrf:
         session.headers.update({"X-XSRF-TOKEN": csrf})
 
-    # 2. Pobierz wszystkie custom indeksy
+    # 3. Retrieve all custom indexes
     r = session.get(f"{HOST}{API_BASE}/config-elements",
                     params={"filter": 'category="userIndex.index"'})
     data = r.json().get("data", [])
     if not data:
-        logging.info("Brak customowych indeksów do usunięcia.")
+        logging.info("No custom indexes to delete.")
     else:
         for elem in data:
             idx_id = elem["id"]
-            # 3. Usuń każdy
+            # 4. Delete each index
             del_url = f"{HOST}{API_BASE}/config-element-index/user-index/{idx_id}"
             dr = session.delete(del_url)
             if dr.status_code in (200, 204):
-                logging.info(f"Usunięto indeks {idx_id}")
+                logging.info(f"Deleted index {idx_id}")
             else:
-                logging.error(f"Nie udało się usunąć {idx_id}: {dr.status_code} {dr.text}")
+                logging.error(f"Failed to delete {idx_id}: {dr.status_code} {dr.text}")
 
-    # 4. Logout
+    # 5. Logout
     session.get(f"{HOST}{API_BASE}/logout")
-    logging.info("Wylogowano")
+    logging.info("Logged out")
 
 if __name__ == "__main__":
     main()
