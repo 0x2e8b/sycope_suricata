@@ -22,9 +22,9 @@ logging.basicConfig(
 )
 
 # --- Configuration ---
-SYCOPE_HOST = "https://sycope.local:8443"    # adres Sycope z protokołem i portem
+SYCOPE_HOST = ""    # adres Sycope z protokołem i portem
 LOGIN       = "admin"                        # użytkownik Sycope
-PASSWORD    = "Nadodrzanska10!"               # hasło Sycope
+PASSWORD    = ""               # hasło Sycope
 INDEX_NAME  = "suricata"               # nazwa tworzonego indeksu
 
 # Ścieżka bazowa do API
