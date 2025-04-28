@@ -26,7 +26,6 @@ logging.basicConfig(
 SCRIPT_DIR   = os.path.dirname(os.path.abspath(__file__))
 CONFIG_FILE  = os.path.join(SCRIPT_DIR, "config.json")
 cfg          = json.load(open(CONFIG_FILE))
-
 SYCOPE_HOST  = cfg["sycope_host"].rstrip("/")      # Sycope address with protocol and port
 LOGIN        = cfg["sycope_login"]                 # Sycope username
 PASSWORD     = cfg["sycope_pass"]                  # Sycope password
@@ -49,13 +48,13 @@ FIELDS = [
     {"name":"alert_gid",           "type":"int",      "description":"Generator ID",            "displayName":"Alert GID"},
     {"name":"alert_signature_id",  "type":"int",      "description":"Signature ID",            "displayName":"Sig ID"},
     {"name":"alert_rev",           "type":"int",      "description":"Signature revision",      "displayName":"Sig Rev"},
-    {"name":"alert_signature",     "type":"string",   "description":"Signature text",          "displayName":"Signature"},
-    {"name":"alert_category",      "type":"string",   "description":"Signature category",      "displayName":"Category"},
+    {"name":"event_signature",     "type":"string",   "description":"Signature text",          "displayName":"Signature"},
+    {"name":"event_category",      "type":"string",   "description":"Signature category",      "displayName":"Category"},
     {"name":"alert_severity",      "type":"int",      "description":"Severity level",          "displayName":"Severity"},
     # anomaly fields
-    {"name":"anomaly_type",        "type":"string",   "description":"Anomaly type",            "displayName":"Anomaly Type"},
-    {"name":"anomaly_event",       "type":"string",   "description":"Anomaly event",           "displayName":"Anomaly Event"},
-    {"name":"anomaly_layer",       "type":"string",   "description":"Anomaly layer",           "displayName":"Layer"},
+#    {"name":"anomaly_type",        "type":"string",   "description":"Anomaly type",            "displayName":"Anomaly Type"},
+#    {"name":"anomaly_event",       "type":"string",   "description":"Anomaly event",           "displayName":"Anomaly Event"},
+#    {"name":"anomaly_layer",       "type":"string",   "description":"Anomaly layer",           "displayName":"Layer"},
     # additional
     {"name":"app_proto",           "type":"string",   "description":"Application protocol",    "displayName":"App Proto"}
 ]
