@@ -10,10 +10,10 @@ from datetime import datetime, timezone
 import requests
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
-# --- Disable SSL warnings (self-signed certs) ---
+#  Disable SSL warnings (self-signed certs)
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
-# --- Logging ---
+#  Logging
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
@@ -25,6 +25,7 @@ logging.basicConfig(
 
 CONFIG_FILE = 'config.json'
 SCRIPT_DIR  = os.path.dirname(os.path.abspath(__file__))
+
 
 def load_config(path):
     try:
@@ -39,16 +40,19 @@ def load_config(path):
         logging.error(f"ERROR loading config: {e}")
         sys.exit(1)
 
+
 def load_last_ts(path):
     if not os.path.exists(path):
         return datetime.fromtimestamp(0, tz=timezone.utc)
     txt = open(path).read().strip()
     return datetime.fromisoformat(txt) if txt else datetime.fromtimestamp(0, tz=timezone.utc)
 
+
 def save_last_ts(path, dt):
     if dt.tzinfo is None:
         dt = dt.replace(tzinfo=timezone.utc)
     open(path, 'w').write(dt.isoformat())
+
 
 def parse_eve_ts(s):
     if len(s) > 6 and s[-3] == ':':
@@ -56,8 +60,9 @@ def parse_eve_ts(s):
     dt = datetime.fromisoformat(s)
     return dt.astimezone(timezone.utc) if dt.tzinfo else dt.replace(tzinfo=timezone.utc)
 
+
 def should_process(ev, cfg, last_dt):
-    et, ts = ev.get("event_type"), ev.get("timestamp")
+    et, ts = ev.get("event_type"), ev.get("timestamp", False)
     if not et or not ts:
         return False, None
     dt = parse_eve_ts(ts)
@@ -75,33 +80,23 @@ def should_process(ev, cfg, last_dt):
             return False, dt
     return True, dt
 
-def build_row(ev, columns):
-    row = []
-    for col in columns:
-        # if field is directly in the event
-        if col in ev:
-            val = ev[col]
-        else:
-            # try splitting e.g. "alert_signature" → ["alert","signature"]
-            parts = col.split('_', 1)
-            if len(parts) == 2 and parts[0] in ev and isinstance(ev[parts[0]], dict):
-                val = ev[parts[0]].get(parts[1])
-            else:
-                val = None
-        # convert timestamp to milliseconds
-        if col == "timestamp" and isinstance(val, str):
-            dt = parse_eve_ts(val)
-            val = int(dt.timestamp() * 1000) if dt else None
 
-        row.append(val)
-    return row
-
-def valid_ipv4(addr):
+#  Col actions
+def action_valid_ipv4(addr):
     try:
         socket.inet_aton(addr)
-        return True
+        return addr
     except Exception:
-        return False
+        raise
+
+
+def action_convert_time(val):
+    try:
+        dt = parse_eve_ts(val)
+        return int(dt.timestamp() * 1000)
+    except:
+        return None
+
 
 def init_sycope(cfg):
     host = cfg["sycope_host"].rstrip("/")
@@ -120,6 +115,62 @@ def init_sycope(cfg):
         sess.headers.update({"X-XSRF-TOKEN": token})
     return sess, host
 
+
+def build_row(ev, columns, column_actions=None):
+    if column_actions is None:
+        column_actions = {}
+
+    # Fields map (by event_type)
+    COLUMN_MAP = {
+        "common": {
+            "timestamp": ["timestamp"],
+            "flow_id":   ["flow_id"],
+            "in_iface":  ["in_iface"],
+            "event_type": ["event_type"],
+            "src_ip": ["src_ip"],
+            "src_port": ["src_port"],
+            "dest_ip": ["dest_ip"],
+            "dest_port": ["dest_port"],
+            "proto": ["proto"],
+            "app_proto": ["app_proto"]
+        },
+        "anomaly": {
+            "event_category":  ["anomaly", "type"],
+            "event_signature": ["anomaly", "event"]
+#            ,"anomaly_layer":    ["anomaly", "layer"]
+        },
+        "alert": {
+            "alert_action": ["alert", "action"],
+            "alert_gid": ["alert", "gid"],
+            "alert_signature_id": ["alert", "signature_id"],
+            "alert_rev": ["alert", "rev"],
+            "event_signature": ["alert", "signature"],
+            "event_category": ["alert", "category"],
+            "alert_severity": ["alert", "severity"]
+        }
+    }
+
+    et = ev.get("event_type")
+    row_map = COLUMN_MAP["common"].copy()
+    row_map.update(COLUMN_MAP.get(et, {}))
+
+    row = []
+    for col in columns:
+
+        if col in row_map:
+            val = ev
+            for key in row_map[col]:
+                val = val.get(key, None)
+        else:
+            val = ev.get(col) or None
+
+        if col in column_actions:
+            val = column_actions[col](val)
+
+        row.append(val)
+    return row
+
+
 def main():
     cfg      = load_config(os.path.join(SCRIPT_DIR, CONFIG_FILE))
     eve_path = cfg["suricata_eve_json_path"]
@@ -131,7 +182,6 @@ def main():
 
     sess, host = init_sycope(cfg)
 
-    # retrieve custom index
     r = sess.get(
         f"{host}/npm/api/v1/config-elements",
         params={'filter': 'category="userIndex.index"'}
@@ -140,14 +190,21 @@ def main():
     if not data:
         logging.error("No custom indexes defined in Sycope.")
         sys.exit(1)
-    idx        = data[0]
-    INDEX_NAME = idx["config"]["name"]
-    fields     = idx["config"]["fields"]
-    COLUMNS    = [f["name"] for f in fields]
-    TYPES      = [f["type"] for f in fields]
+    idx         = data[0]
+    INDEX_NAME  = idx["config"]["name"]
+    fields      = idx["config"]["fields"]
+    COLUMNS     = [f["name"] for f in fields]
+    TYPES       = [f["type"] for f in fields]
     logging.info(f"Using index '{INDEX_NAME}', columns: {COLUMNS}")
 
-    # parse eve.json
+
+    column_actions = {}
+    for col, typ in zip(COLUMNS, TYPES):
+        if typ == "ip4":
+            column_actions[col] = action_valid_ipv4
+        if col == "timestamp":
+            column_actions[col] = action_convert_time
+
     with open(eve_path) as f:
         for ln, line in enumerate(f, 1):
             line = line.strip()
@@ -166,20 +223,13 @@ def main():
                 counts["skipped"] += 1
                 continue
 
-            row = build_row(ev, COLUMNS)
-
-            # IPv4 validation
-            bad = False
-            for val, typ in zip(row, TYPES):
-                if typ == "ip4" and val is not None and not valid_ipv4(val):
-                    bad = True
-                    break
-            if bad:
+            try:
+                row = build_row(ev, COLUMNS, column_actions)
+            except Exception:
                 counts["invalid"] += 1
-                continue
-
-            rows.append(row)
-            counts["processed"] += 1
+            else:
+                rows.append(row)
+                counts["processed"] += 1
 
     logging.info(f"Processed={counts['processed']} Skipped={counts['skipped']} InvalidIP={counts['invalid']}")
 
@@ -201,6 +251,7 @@ def main():
 
     sess.get(f"{host}/npm/api/v1/logout")
     logging.info("Session ended")
+
 
 if __name__ == "__main__":
     main()
