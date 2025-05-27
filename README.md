@@ -77,9 +77,9 @@
    apt-get install suricata
 
 2. **Enable EVE JSON in /etc/suricata/suricata.yaml:**
-```json
-outputs:
-  - eve-log:
-      enabled: yes
-      filetype: regular
-      filename: /var/log/suricata/eve.json
+```
+   outputs:
+     - eve-log:
+         enabled: yes
+         filetype: regular
+         filename: /var/log/suricata/eve.json
