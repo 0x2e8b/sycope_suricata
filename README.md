@@ -10,8 +10,9 @@
 - **delete_indexes.py** – clean up old “userIndex.index” entries in Sycope  
 - **config.json** – connection & filter settings  
 - **Suricata_Dashboard_Sycope.json** – pre-built Sycope dashboard
+![image](https://github.com/user-attachments/assets/05651483-587e-442c-a877-240cdb92a4a7)
 
->  _I recommend isolating Suricata data in its own index (“suricata”) for clarity._
+>  _We recommend isolating Suricata data in its own index (“suricata”) for clarity._
 
 ---
 
@@ -59,6 +60,7 @@
 ---
 
 ##  Dashboard Import
+
 1. In Sycope UI, go to **Dashboards → Import**  
 2. Upload **Suricata_Dashboard_Sycope.json**  
 3. Link to “suricata” index  
@@ -69,7 +71,7 @@
 
 ---
 
-##  Suricata Setup & Traffic Redirect
+##  Suricata Setup
 1. **Install**:  
    ```bash
    apt-get install suricata
