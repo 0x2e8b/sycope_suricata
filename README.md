@@ -16,7 +16,7 @@
 ---
 
 ##  Prerequisites
-- **Sycope** v?.? with API access  
+- **Sycope** >= v3.1 with API access  
 - **Python 3.8+**  
 - **Requests** library (`pip install requests`)  
 - **Suricata** 6.0+  
