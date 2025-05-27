@@ -52,9 +52,9 @@
 
 | Script               | Purpose                                    | Example                                        |
 |----------------------|--------------------------------------------|------------------------------------------------|
-| **new_index.py**     | Create index & mappings                    | `python new_index.py`                          |
-| **eve_processor.py** | Parse & inject new events                  | `python eve_processor.py` *(cron every min)*   |
-| **delete_indexes.py**| Remove stale custom indexes                | `python delete_indexes.py`                     |
+| **new_index.py**     | Create index & mappings                    | `python3 new_index.py`                          |
+| **eve_processor.py** | Parse & inject new events                  | `python3 eve_processor.py` *(cron every min)*   |
+| **delete_indexes.py**| Remove stale custom indexes                | `python3 delete_indexes.py`                     |
 
 ---
 
@@ -75,7 +75,8 @@
    apt-get install suricata
 
 2. **Enable EVE JSON in /etc/suricata/suricata.yaml:**
-   outputs:
+```json
+outputs:
   - eve-log:
       enabled: yes
       filetype: regular
