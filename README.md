@@ -43,7 +43,7 @@
 | `suricata_eve_json_path`| Path to Suricata’s EVE JSON log                                   | `/var/log/suricata/eve.json` |
 | `last_timestamp_file`   | File to persist last‐processed timestamp                          | `last_timestamp.txt` |
 | `event_types`           | Which events to ingest (`alert`,`anomaly`)                        | `["anomaly","alert"]` |
-| `*_whitelist`/blacklist`| Fine‐grained filtering by signature ID or anomaly name            | `false` / `[]`     |
+| `*_whitelist`/`blacklist`| Fine‐grained filtering by signature ID or anomaly name            | `false` / `[]`     |
 
 >  Use whitelists sparingly – blacklists are safer to start.
 
