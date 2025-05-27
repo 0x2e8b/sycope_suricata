@@ -19,7 +19,7 @@
 ##  Prerequisites
 - **Sycope** >= v3.1 with API access  
 - **Python 3.8+**  
-- **Requests** library (`pip install requests`)  
+- **Requests** library (`pip3 install requests`)  
 - **Suricata** 6.0+  
 - Network tap/span or NFLOG/iptables redirect to feed Suricata  
 
@@ -28,7 +28,7 @@
 ##  Installation
 1. `git clone https://github.com/0x2e8b/sycope_suricata.git`  
 2. `cd sycope_suricata`  
-3. `pip install -r requirements.txt` *(or `pip install requests`)*  
+3. `pip3 install -r requirements.txt` 
 4. Edit **config.json** (see next)
 
 ---
@@ -36,7 +36,7 @@
 ##  Configuration (`config.json`)
 | Key                     | Description                                                       | Default            |
 |-------------------------|-------------------------------------------------------------------|--------------------|
-| `sycope_host`           | “https://sycope.example.com:port”                                 | `""`               |
+| `sycope_host`           | https://sycope.example.com:port                                   | `""`               |
 | `sycope_login`          | API user                                                          | `admin`            |
 | `sycope_pass`           | API password                                                      | `""`               |
 | `index_name`            | Index name in Sycope                                              | `suricata`         |
@@ -77,7 +77,7 @@
    apt-get install suricata
 
 2. **Enable EVE JSON in /etc/suricata/suricata.yaml:**
-```
+   ```
    outputs:
      - eve-log:
          enabled: yes
