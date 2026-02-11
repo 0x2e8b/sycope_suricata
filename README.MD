@@ -1,8 +1,24 @@
 # Suricata Integration with Sycope
 
+[![Sycope](https://img.shields.io/badge/Sycope-3.1+-0066CC?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0wIDE4Yy00LjQyIDAtOC0zLjU4LTgtOHMzLjU4LTggOC04IDggMy41OCA4IDgtMy41OCA4LTggNHoiLz48L3N2Zz4=)](https://www.sycope.com)
+[![Suricata](https://img.shields.io/badge/Suricata-6.0+-F05A28?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAxTDMgNXY2YzAgNS41NSAzLjg0IDEwLjc0IDkgMTIgNS4xNi0xLjI2IDktNi40NSA5LTEyVjVsLTktNHptMCAyLjE4bDcgMy4xMnY1LjdjMCA0LjgzLTMuMjMgOS4zNi03IDEwLjU2VjMuMTh6Ii8+PC9zdmc+)](https://suricata.io)
+[![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![EVE JSON](https://img.shields.io/badge/EVE_JSON-6_event_types-8B5CF6?style=for-the-badge)](https://docs.suricata.io/en/latest/output/eve/eve-json-output.html)
+[![Dashboards](https://img.shields.io/badge/Dashboards-4_included-E91E63?style=for-the-badge)](#-dashboard-import)
+
 This integration enables sending Suricata security events to a custom index in **Sycope** for further correlation, search, and visualization.
 
 Supported event types: **alerts**, **anomalies**, **DNS**, **HTTP**, **TLS**, and **file info**.
+
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/0x2e8b/sycope_suricata/blob/main/screenshots/overview.png"><img src="https://github.com/0x2e8b/sycope_suricata/blob/main/screenshots/overview.png?raw=true" width="240" alt="Overview Dashboard"/></a><br/><sub>Overview</sub></td>
+    <td align="center"><a href="https://github.com/0x2e8b/sycope_suricata/blob/main/screenshots/alert_analysis.png"><img src="https://github.com/0x2e8b/sycope_suricata/blob/main/screenshots/alert_analysis.png?raw=true" width="240" alt="Alert Analysis"/></a><br/><sub>Alert Analysis</sub></td>
+    <td align="center"><a href="https://github.com/0x2e8b/sycope_suricata/blob/main/screenshots/protocols.png"><img src="https://github.com/0x2e8b/sycope_suricata/blob/main/screenshots/protocols.png?raw=true" width="240" alt="Protocols"/></a><br/><sub>Protocols</sub></td>
+    <td align="center"><a href="https://github.com/0x2e8b/sycope_suricata/blob/main/screenshots/file_analysis.png"><img src="https://github.com/0x2e8b/sycope_suricata/blob/main/screenshots/file_analysis.png?raw=true" width="240" alt="File Analysis"/></a><br/><sub>File Analysis</sub></td>
+  </tr>
+</table>
 
 ---
 
