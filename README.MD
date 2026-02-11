@@ -332,5 +332,5 @@ apt-get install suricata
 - Make sure the Sycope user has proper API rights
 - Confirm `eve.json` contains supported event types (`alert`, `anomaly`, `dns`, `http`, `tls`, `fileinfo`)
 - If the Protocols dashboard shows no data, verify DNS/HTTP/TLS logging is enabled in `suricata.yaml`
-- If the File Analysis dashboard shows no data, verify `files` logging is enabled in `suricata.yaml` with `force-magic: yes` and `force-hash: [sha256]`
+- If the File Analysis dashboard shows no data, verify `files` logging is enabled in `suricata.yaml` with `force-magic: yes` and `force-hash: [sha256, sha1, md5]`
 - Feel free to contact our engineers via dedicated Discord Channel: https://discord.gg/dFjTv854
