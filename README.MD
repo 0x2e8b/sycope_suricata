@@ -317,7 +317,7 @@ apt-get install suricata
            - files:
                enabled: yes
                force-magic: yes
-               force-hash: [sha256]
+               force-hash: [sha256, sha1, md5]
    ```
 
    > See `examples/suricata.yaml.full-example` for a complete configuration file.

@@ -76,7 +76,7 @@ outputs:
         - files:
             enabled: yes
             force-magic: yes
-            force-hash: [sha256]
+            force-hash: [sha256, sha1, md5]
 
         # Not processed by Sycope
         - flow:
