@@ -1,0 +1,4151 @@
+{
+  "name": "Suricata Protocols",
+  "type": "dashboard",
+  "tags": [],
+  "createdBy": "admin",
+  "modifiedBy": "admin",
+  "created": 1770825045664,
+  "modified": 1770825045664,
+  "dashboardConfig": {
+    "cols": 24,
+    "gridType": "proportional",
+    "rows": 18,
+    "compactType": null,
+    "widgetSpacing": 8,
+    "disableVisAnimations": false,
+    "dashboardType": "standard",
+    "type": "standard",
+    "related": [],
+    "requireFilters": {},
+    "requireTimerange": {
+      "maxRange": "30m"
+    }
+  },
+  "items": [
+    {
+      "layout": {
+        "id": "d2209e35-bdd8-4d9d-827e-80355daafb56",
+        "header": null,
+        "w": 8,
+        "h": 6,
+        "x": 0,
+        "y": 0,
+        "moved": false,
+        "static": false
+      },
+      "config": {
+        "$ref": "ca712e89-52294ef1-b3ce6475",
+        "id": "ca712e89-52294ef1-b3ce6475",
+        "name": "Suricata - DNS Queries Over Time",
+        "type": "visualization",
+        "tags": null,
+        "createdBy": "admin",
+        "modifiedBy": "admin",
+        "created": 1770825045664,
+        "modified": 1770825045664,
+        "visualizationConfig": {
+          "type": "chart",
+          "concreteVisualizationConfig": {
+            "dataKey": "countDnsRrtype",
+            "dataKeys": [
+              "countDnsRrtype"
+            ],
+            "categoryKey": "srcEventTimestamp",
+            "categoryKeys": [
+              "srcEventTimestamp",
+              "dns_rrtype"
+            ],
+            "formatting": {
+              "metrics": [
+                {
+                  "formattingType": "off"
+                }
+              ],
+              "buckets": [
+                {
+                  "formattingType": "date",
+                  "formattingPattern": "yyyy-MM-dd HH:mm"
+                },
+                null
+              ]
+            },
+            "names": {
+              "metrics": [
+                {
+                  "custom": false,
+                  "value": "count(DNS Record Type)"
+                }
+              ],
+              "buckets": [
+                {
+                  "custom": false,
+                  "value": "Time"
+                },
+                {
+                  "custom": false,
+                  "value": "DNS Record Type"
+                }
+              ]
+            },
+            "colors": {
+              "metrics": [
+                {
+                  "useCustomColor": false,
+                  "useDefaultColor": true
+                }
+              ]
+            },
+            "thresholds": {
+              "metrics": [
+                null
+              ]
+            },
+            "areThresholdsAbsolute": {
+              "metrics": [
+                null
+              ]
+            },
+            "baselines": [],
+            "baselineMetrics": {},
+            "baselineKeys": [],
+            "defaultFilterStream": [
+              "suricata",
+              "suricata"
+            ],
+            "isCategoryDate": true,
+            "categoryDateInterval": "5m",
+            "autoBucket": true,
+            "timeKeys": [
+              "srcEventTimestamp"
+            ],
+            "splitKeys": [
+              "dns_rrtype"
+            ],
+            "splitChartsKeys": [],
+            "splitSeriesKeys": [
+              "dns_rrtype"
+            ],
+            "joinDataCategories": [
+              "srcEventTimestamp"
+            ],
+            "gridIndexes": [
+              0
+            ],
+            "markers": [
+              {
+                "maxMarker": {},
+                "minMarker": {},
+                "maxLine": {},
+                "minLine": {},
+                "avgLine": {}
+              }
+            ],
+            "stack": {
+              "metrics": [
+                "Type"
+              ]
+            },
+            "valueConfigs": {
+              "metrics": [
+                {
+                  "showLabels": false
+                }
+              ]
+            },
+            "active": {
+              "metrics": [
+                true
+              ]
+            },
+            "sort": "desc",
+            "includeTotal": {
+              "hidden": false
+            },
+            "type": "bar",
+            "hideTooMuchData": {
+              "active": true,
+              "value": 502,
+              "message": "To protect the browser performance, a limit of output records has been imposed on the widget. Please apply filters or narrow down the analysed time frame to display the results."
+            },
+            "hideTooMuchInputData": {
+              "active": false
+            },
+            "noData": {
+              "active": false
+            },
+            "animation": true,
+            "drilldown": [],
+            "showLocalQuerySwitch": false,
+            "displayValuesOnXAxis": false,
+            "yAxes": [
+              {
+                "series": [
+                  0
+                ],
+                "position": "default",
+                "useCustomName": false,
+                "showAxisLabels": true,
+                "axisLabelStyles": {
+                  "nameTextStyle": {
+                    "fontWeight": "normal",
+                    "fontSize": 12
+                  }
+                },
+                "width": 100,
+                "labelAngle": 0,
+                "labelPosition": "outside",
+                "forceAllLabels": false,
+                "formatting": {
+                  "formattingType": "off"
+                },
+                "logScale": false,
+                "inverse": false,
+                "barCategoryGapCustom": false,
+                "axisLine": {
+                  "custom": false
+                },
+                "splitLine": {
+                  "custom": false
+                },
+                "axisPointerConfig": {
+                  "show": false,
+                  "snap": false,
+                  "type": "shadow"
+                }
+              }
+            ],
+            "xAxes": [
+              {
+                "series": [
+                  0
+                ],
+                "position": "default",
+                "useCustomName": false,
+                "showAxisLabels": true,
+                "axisLabelStyles": {
+                  "nameTextStyle": {
+                    "fontWeight": "normal",
+                    "fontSize": 12
+                  }
+                },
+                "width": 100,
+                "labelAngle": 0,
+                "labelPosition": "outside",
+                "forceAllLabels": false,
+                "formatting": {
+                  "formattingType": "off"
+                },
+                "logScale": false,
+                "inverse": false,
+                "barCategoryGapCustom": false,
+                "axisLine": {
+                  "custom": false
+                },
+                "splitLine": {
+                  "custom": false
+                },
+                "axisPointerConfig": {
+                  "show": true,
+                  "snap": true,
+                  "type": "shadow"
+                }
+              }
+            ],
+            "showLegend": true,
+            "legendPosition": "top",
+            "showLegendMetricName": false,
+            "legendIcons": "radio",
+            "showInSingleMode": false,
+            "showSimpleChartTitle": true,
+            "chartAreaConfig": {
+              "active": false
+            }
+          }
+        },
+        "data": {
+          "dataMode": "advanced",
+          "source": {
+            "name": "suricata",
+            "type": "stream",
+            "isRaw": true,
+            "base": "suricata",
+            "resolution": ""
+          },
+          "query": {
+            "timerange": {
+              "from": "now-24hours",
+              "to": "now",
+              "roundTo": "hour"
+            },
+            "query": "",
+            "advanced": false
+          },
+          "outputQuery": {},
+          "aggs": {
+            "metrics": [
+              {
+                "metric": "dns_rrtype",
+                "metricName": "DNS Record Type",
+                "useAggr": true,
+                "field": "dns_rrtype",
+                "fieldType": "field",
+                "aggregation": "count",
+                "aggrParams": {},
+                "fn": {
+                  "aggr": "countDnsRrtype=count(dns_rrtype)",
+                  "postAggr": ""
+                },
+                "alias": "countDnsRrtype",
+                "includeNullValues": true,
+                "includeZeroValues": true,
+                "includeEmptyValues": true
+              }
+            ],
+            "buckets": [
+              {
+                "aggregation": "timeAggr",
+                "bucket": "timestamp",
+                "field": "timestamp",
+                "alias": "srcEventTimestamp",
+                "preFn": "timestamp",
+                "autoBucket": true,
+                "interval": "5m",
+                "includeNullValues": true,
+                "includeZeroValues": true,
+                "includeEmptyValues": true,
+                "includeEmptyListValues": true,
+                "limit": {
+                  "active": true,
+                  "type": "top",
+                  "limit": 10,
+                  "byMetric": "",
+                  "byMetricSort": "desc",
+                  "byField": [],
+                  "inverted": false,
+                  "showOthers": false
+                },
+                "filterFn": {
+                  "custom": false
+                },
+                "unwindCollection": false,
+                "isCollectionFieldType": false,
+                "isNumberFieldType": false,
+                "isStringFieldType": false
+              },
+              {
+                "aggregation": "terms",
+                "useFn": false,
+                "bucket": "dns_rrtype",
+                "field": "dns_rrtype",
+                "alias": "dns_rrtype",
+                "preFn": "dns_rrtype",
+                "autoBucket": true,
+                "interval": "5m",
+                "includeNullValues": true,
+                "includeZeroValues": true,
+                "includeEmptyValues": true,
+                "includeEmptyListValues": true,
+                "limit": {
+                  "active": true,
+                  "type": "top",
+                  "limit": 10,
+                  "byMetric": "",
+                  "byMetricSort": "desc",
+                  "byField": [],
+                  "inverted": false,
+                  "showOthers": false
+                },
+                "filterFn": {
+                  "custom": false
+                },
+                "unwindCollection": false,
+                "isCollectionFieldType": false,
+                "isNumberFieldType": false,
+                "isStringFieldType": true,
+                "splitChart": false
+              }
+            ]
+          },
+          "sorters": [],
+          "limit": {
+            "active": true,
+            "limit": 100,
+            "from": "head",
+            "othersShow": false
+          },
+          "queries": [
+            {
+              "nql": "src event_type = \"dns\" | (valInColl(dns_rrtype, \"ca712e89-52294ef1-b3ce6475_0_dns_rrtype_bucket-limit\", \"dns_rrtype\") OR dns_rrtype = null) | timeAggr countDnsRrtype=count(dns_rrtype) on timestamp by dns_rrtype as dns_rrtype interval=\"${AUTOBUCKET_INTERVAL}\" dir=\"desc\" unwind=true bucketAlias=\"srcEventTimestamp\" | limit 100",
+              "subpipes": [
+                {
+                  "nql": "${LIMIT_SOURCE} | neq(null, dns_rrtype) | aggr countDnsRrtype=count(dns_rrtype) by dns_rrtype as dns_rrtype unwind=true | sort countDnsRrtype desc | limit 10 | dst \"ca712e89-52294ef1-b3ce6475_0_dns_rrtype_bucket-limit\""
+                }
+              ]
+            }
+          ],
+          "includeTotal": {
+            "hidden": false
+          },
+          "columns": []
+        },
+        "version": 31,
+        "options": {},
+        "entitySet": "COMPONENT",
+        "entityType": "visualization",
+        "annotations": null,
+        "_qbId": "ca712e89-52294ef1-b3ce6475",
+        "permissions": {
+          "entityId": "ca712e89-52294ef1-b3ce6475",
+          "entityType": "COMPONENT.visualization",
+          "canAdd": true,
+          "canView": true,
+          "canEdit": true,
+          "canDelete": true,
+          "canExecute": true,
+          "canModifyOwner": true,
+          "canGrantPermissions": true
+        }
+      },
+      "style": {
+        "padding": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "layout": {
+        "id": "892b909a-2302-4c74-905e-35c92496b4ac",
+        "header": null,
+        "w": 10,
+        "h": 6,
+        "x": 8,
+        "y": 0,
+        "moved": false,
+        "static": false
+      },
+      "config": {
+        "$ref": "41d13a01-0065459b-9b1504db",
+        "id": "41d13a01-0065459b-9b1504db",
+        "name": "Suricata - Top Queried Domains",
+        "type": "visualization",
+        "tags": null,
+        "createdBy": "admin",
+        "modifiedBy": "admin",
+        "created": 1770825045664,
+        "modified": 1770825045664,
+        "visualizationConfig": {
+          "type": "table",
+          "concreteVisualizationConfig": {
+            "dataKey": "dns_rrtype",
+            "dataKeys": [
+              "dns_rrtype",
+              "countDns"
+            ],
+            "categoryKey": "dns_rrname",
+            "categoryKeys": [
+              "dns_rrname"
+            ],
+            "formatting": {
+              "metrics": [
+                null,
+                {
+                  "formattingType": "off"
+                }
+              ],
+              "buckets": [
+                {
+                  "formattingType": "off"
+                }
+              ]
+            },
+            "names": {
+              "metrics": [
+                {
+                  "value": "first(dns_rrtype)"
+                },
+                {
+                  "custom": false,
+                  "value": "count(dns_rrname)"
+                }
+              ],
+              "buckets": [
+                {
+                  "custom": true,
+                  "value": "Domain"
+                }
+              ]
+            },
+            "colors": {
+              "metrics": [
+                {
+                  "useDefaultColor": true
+                },
+                {
+                  "useDefaultColor": true
+                }
+              ]
+            },
+            "thresholds": {
+              "metrics": [
+                null,
+                null
+              ]
+            },
+            "areThresholdsAbsolute": {
+              "metrics": [
+                null,
+                null
+              ]
+            },
+            "baselines": [],
+            "baselineMetrics": {},
+            "baselineKeys": [],
+            "defaultFilterStream": [
+              "suricata"
+            ],
+            "columns": [
+              {
+                "active": true,
+                "columnType": "bucket",
+                "alias": "dns_rrname",
+                "aggregation": "terms",
+                "field": "dns_rrname",
+                "fieldName": "dns_rrname",
+                "useFn": false,
+                "isSavedField": false,
+                "fn": {},
+                "bucket": "dns_rrname",
+                "preFn": "dns_rrname",
+                "filterFn": {
+                  "custom": false
+                },
+                "isStringFieldType": true,
+                "isNumberFieldType": false,
+                "isCollectionFieldType": false,
+                "unwindCollection": false,
+                "autoBucket": true,
+                "interval": "5m",
+                "visualOptions": {
+                  "label": "Domain",
+                  "showLabel": true,
+                  "align": "left"
+                },
+                "formatting": {
+                  "formattingType": "off"
+                },
+                "defaultColAutoWidth": true,
+                "backgroundColor": {
+                  "useCustomColor": false
+                },
+                "foregroundColor": {
+                  "useCustomColor": false
+                },
+                "countBar": {
+                  "active": false
+                },
+                "includeNullValues": true,
+                "includeEmptyValues": true,
+                "includeEmptyListValues": true,
+                "includeZeroValues": true,
+                "limit": {
+                  "active": false
+                },
+                "showAddFilterButton": true,
+                "defaultFilterStream": "suricata",
+                "dataField": "dns_rrname"
+              },
+              {
+                "active": true,
+                "columnType": "column",
+                "alias": "dns_rrtype",
+                "field": "dns_rrtype",
+                "fieldName": "dns_rrtype",
+                "fieldType": "field",
+                "useFn": false,
+                "isSavedField": false,
+                "fn": {},
+                "preFn": "dns_rrtype",
+                "column": "dns_rrtype",
+                "visualOptions": {
+                  "label": "Record Type",
+                  "showLabel": true,
+                  "align": "left"
+                },
+                "formatting": {
+                  "formattingType": "off"
+                },
+                "backgroundColor": {
+                  "useCustomColor": false
+                },
+                "foregroundColor": {
+                  "useCustomColor": false
+                },
+                "countBar": {
+                  "active": false
+                },
+                "includeNullValues": true,
+                "includeEmptyValues": true,
+                "includeEmptyListValues": true,
+                "includeZeroValues": true,
+                "limit": {
+                  "active": false
+                },
+                "showAddFilterButton": true,
+                "defaultFilterStream": "suricata",
+                "dataField": "dns_rrtype",
+                "isStringFieldType": true,
+                "isCollectionFieldType": false,
+                "isNumberFieldType": false
+              },
+              {
+                "active": true,
+                "columnType": "metric",
+                "metric": "dns_rrname",
+                "alias": "countDns",
+                "aggregation": "count",
+                "useAggr": true,
+                "metricName": "Domain",
+                "field": "dns_rrname",
+                "fieldName": "count(dns_rrname)",
+                "fieldType": "field",
+                "aggrParams": {},
+                "fn": {
+                  "aggr": "countDns=count(dns_rrname)",
+                  "postAggr": ""
+                },
+                "visualOptions": {
+                  "label": "count(dns_rrname)",
+                  "showLabel": false,
+                  "align": "left"
+                },
+                "formatting": {
+                  "formattingType": "off"
+                },
+                "defaultColAutoWidth": false,
+                "backgroundColor": {
+                  "useCustomColor": false
+                },
+                "foregroundColor": {
+                  "useCustomColor": false
+                },
+                "metricBar": {
+                  "active": false
+                },
+                "includeNullValues": true,
+                "includeEmptyValues": true,
+                "includeEmptyListValues": true,
+                "includeZeroValues": true,
+                "limit": {
+                  "active": false
+                },
+                "showAddFilterButton": true,
+                "defaultFilterStream": "suricata",
+                "dataField": "countDns",
+                "isStringFieldType": true,
+                "isCollectionFieldType": false,
+                "isNumberFieldType": false
+              }
+            ],
+            "includeTotal": {
+              "active": false,
+              "hidden": false
+            },
+            "groupRowsByOrder": 1,
+            "type": "table",
+            "hideTooMuchData": {
+              "active": true,
+              "value": 502,
+              "message": "To protect the browser performance, a limit of output records has been imposed on the widget. Please apply filters or narrow down the analysed time frame to display the results."
+            },
+            "hideTooMuchInputData": {
+              "active": false
+            },
+            "noData": {
+              "active": false
+            },
+            "drilldown": [],
+            "showLocalQuerySwitch": false,
+            "globalFilter": true,
+            "filterable": true,
+            "sortable": true,
+            "displayValuesOnXAxis": false,
+            "rowGroupMode": null,
+            "groupRowsBy": null
+          }
+        },
+        "data": {
+          "dataMode": "advanced",
+          "source": {
+            "name": "suricata",
+            "type": "stream",
+            "isRaw": true,
+            "base": "suricata",
+            "resolution": ""
+          },
+          "query": {
+            "timerange": {
+              "from": "now-24hours",
+              "to": "now",
+              "roundTo": "hour"
+            },
+            "query": "",
+            "advanced": false
+          },
+          "outputQuery": {},
+          "aggs": {
+            "metrics": [
+              {
+                "metric": "dns_rrtype",
+                "field": "dns_rrtype",
+                "aggregation": "first",
+                "fn": {
+                  "aggr": "dns_rrtype=first(dns_rrtype)"
+                },
+                "alias": "dns_rrtype"
+              },
+              {
+                "metric": "dns_rrname",
+                "metricName": "Domain",
+                "useAggr": true,
+                "field": "dns_rrname",
+                "fieldType": "field",
+                "aggregation": "count",
+                "aggrParams": {},
+                "fn": {
+                  "aggr": "countDns=count(dns_rrname)",
+                  "postAggr": ""
+                },
+                "alias": "countDns",
+                "includeNullValues": true,
+                "includeZeroValues": true,
+                "includeEmptyValues": true
+              }
+            ],
+            "buckets": [
+              {
+                "aggregation": "terms",
+                "useFn": false,
+                "bucket": "dns_rrname",
+                "field": "dns_rrname",
+                "alias": "dns_rrname",
+                "preFn": "dns_rrname",
+                "autoBucket": true,
+                "interval": "5m",
+                "includeNullValues": true,
+                "includeZeroValues": true,
+                "includeEmptyValues": true,
+                "includeEmptyListValues": true,
+                "limit": {
+                  "active": false
+                },
+                "filterFn": {
+                  "custom": false
+                },
+                "unwindCollection": false,
+                "isCollectionFieldType": false,
+                "isNumberFieldType": false,
+                "isStringFieldType": true
+              }
+            ]
+          },
+          "sorters": [
+            {
+              "field": "countDns",
+              "direction": "desc",
+              "description": "count(dns_rrname) (desc)"
+            }
+          ],
+          "limit": {
+            "active": true,
+            "limit": 50,
+            "from": "head",
+            "othersShow": false
+          },
+          "queries": [
+            {
+              "nql": "src event_type = \"dns\" | aggr dns_rrtype=first(dns_rrtype), countDns=count(dns_rrname) by dns_rrname as dns_rrname | sort countDns desc | limit 50",
+              "subpipes": []
+            }
+          ],
+          "columns": [
+            {
+              "active": true,
+              "columnType": "bucket",
+              "alias": "dns_rrname",
+              "aggregation": "terms",
+              "field": "dns_rrname",
+              "fieldName": "dns_rrname",
+              "useFn": false,
+              "isSavedField": false,
+              "fn": {},
+              "bucket": "dns_rrname",
+              "preFn": "dns_rrname",
+              "filterFn": {
+                "custom": false
+              },
+              "isStringFieldType": true,
+              "isNumberFieldType": false,
+              "isCollectionFieldType": false,
+              "unwindCollection": false,
+              "autoBucket": true,
+              "interval": "5m",
+              "visualOptions": {
+                "label": "Domain",
+                "showLabel": true,
+                "align": "left"
+              },
+              "formatting": {
+                "formattingType": "off"
+              },
+              "defaultColAutoWidth": true,
+              "backgroundColor": {
+                "useCustomColor": false
+              },
+              "foregroundColor": {
+                "useCustomColor": false
+              },
+              "countBar": {
+                "active": false
+              },
+              "includeNullValues": true,
+              "includeEmptyValues": true,
+              "includeEmptyListValues": true,
+              "includeZeroValues": true,
+              "limit": {
+                "active": false
+              },
+              "showAddFilterButton": true,
+              "defaultFilterStream": "suricata",
+              "dataField": "dns_rrname"
+            },
+            {
+              "active": true,
+              "columnType": "column",
+              "alias": "dns_rrtype",
+              "field": "dns_rrtype",
+              "fieldName": "dns_rrtype",
+              "fieldType": "field",
+              "useFn": false,
+              "isSavedField": false,
+              "fn": {},
+              "preFn": "dns_rrtype",
+              "column": "dns_rrtype",
+              "visualOptions": {
+                "label": "Record Type",
+                "showLabel": true,
+                "align": "left"
+              },
+              "formatting": {
+                "formattingType": "off"
+              },
+              "backgroundColor": {
+                "useCustomColor": false
+              },
+              "foregroundColor": {
+                "useCustomColor": false
+              },
+              "countBar": {
+                "active": false
+              },
+              "includeNullValues": true,
+              "includeEmptyValues": true,
+              "includeEmptyListValues": true,
+              "includeZeroValues": true,
+              "limit": {
+                "active": false
+              },
+              "showAddFilterButton": true,
+              "defaultFilterStream": "suricata",
+              "dataField": "dns_rrtype",
+              "isStringFieldType": true,
+              "isCollectionFieldType": false,
+              "isNumberFieldType": false
+            },
+            {
+              "active": true,
+              "columnType": "metric",
+              "metric": "dns_rrname",
+              "alias": "countDns",
+              "aggregation": "count",
+              "useAggr": true,
+              "metricName": "Domain",
+              "field": "dns_rrname",
+              "fieldName": "count(dns_rrname)",
+              "fieldType": "field",
+              "aggrParams": {},
+              "fn": {
+                "aggr": "countDns=count(dns_rrname)",
+                "postAggr": ""
+              },
+              "visualOptions": {
+                "label": "count(dns_rrname)",
+                "showLabel": false,
+                "align": "left"
+              },
+              "formatting": {
+                "formattingType": "off"
+              },
+              "defaultColAutoWidth": false,
+              "backgroundColor": {
+                "useCustomColor": false
+              },
+              "foregroundColor": {
+                "useCustomColor": false
+              },
+              "metricBar": {
+                "active": false
+              },
+              "includeNullValues": true,
+              "includeEmptyValues": true,
+              "includeEmptyListValues": true,
+              "includeZeroValues": true,
+              "limit": {
+                "active": false
+              },
+              "showAddFilterButton": true,
+              "defaultFilterStream": "suricata",
+              "dataField": "countDns",
+              "isStringFieldType": true,
+              "isCollectionFieldType": false,
+              "isNumberFieldType": false
+            }
+          ],
+          "includeTotal": {
+            "active": false,
+            "hidden": false
+          }
+        },
+        "version": 31,
+        "options": {},
+        "entitySet": "COMPONENT",
+        "entityType": "visualization",
+        "annotations": null,
+        "_qbId": "41d13a01-0065459b-9b1504db",
+        "permissions": {
+          "entityId": "41d13a01-0065459b-9b1504db",
+          "entityType": "COMPONENT.visualization",
+          "canAdd": true,
+          "canView": true,
+          "canEdit": true,
+          "canDelete": true,
+          "canExecute": true,
+          "canModifyOwner": true,
+          "canGrantPermissions": true
+        }
+      },
+      "style": {
+        "padding": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "layout": {
+        "id": "615bac23-828c-4d43-a041-263dd358634e",
+        "header": null,
+        "w": 6,
+        "h": 6,
+        "x": 18,
+        "y": 0,
+        "moved": false,
+        "static": false
+      },
+      "config": {
+        "$ref": "e58ea295-d0714b11-9c5e8c37",
+        "id": "e58ea295-d0714b11-9c5e8c37",
+        "name": "Suricata - DNS Record Types",
+        "type": "visualization",
+        "tags": null,
+        "createdBy": "admin",
+        "modifiedBy": "admin",
+        "created": 1770825045664,
+        "modified": 1770825045664,
+        "visualizationConfig": {
+          "type": "chart",
+          "concreteVisualizationConfig": {
+            "dataKey": "countRrtype",
+            "dataKeys": [
+              "countRrtype"
+            ],
+            "categoryKey": "dns_rrtype",
+            "categoryKeys": [
+              "dns_rrtype"
+            ],
+            "formatting": {
+              "metrics": [
+                {
+                  "formattingType": "off"
+                }
+              ],
+              "buckets": [
+                {
+                  "formattingType": "off"
+                }
+              ]
+            },
+            "names": {
+              "metrics": [
+                {
+                  "custom": false,
+                  "value": "count(DNS Record Type)"
+                }
+              ],
+              "buckets": [
+                {
+                  "custom": false,
+                  "value": "DNS Record Type"
+                }
+              ]
+            },
+            "colors": {
+              "metrics": [
+                {
+                  "useCustomColor": false,
+                  "useDefaultColor": true
+                }
+              ]
+            },
+            "thresholds": {
+              "metrics": [
+                null
+              ]
+            },
+            "areThresholdsAbsolute": {
+              "metrics": [
+                null
+              ]
+            },
+            "baselines": [],
+            "baselineMetrics": {},
+            "baselineKeys": [],
+            "defaultFilterStream": [
+              "suricata"
+            ],
+            "isCategoryDate": false,
+            "categoryDateInterval": "5m",
+            "autoBucket": false,
+            "timeKeys": [],
+            "splitKeys": [],
+            "splitChartsKeys": [],
+            "splitSeriesKeys": [],
+            "joinDataCategories": [],
+            "gridIndexes": [
+              0
+            ],
+            "markers": [
+              {
+                "maxMarker": {},
+                "minMarker": {},
+                "maxLine": {},
+                "minLine": {},
+                "avgLine": {}
+              }
+            ],
+            "stack": {
+              "metrics": [
+                null
+              ]
+            },
+            "valueConfigs": {
+              "metrics": [
+                {
+                  "showLabels": false
+                }
+              ]
+            },
+            "active": {
+              "metrics": [
+                true
+              ]
+            },
+            "sort": "desc",
+            "includeTotal": {
+              "hidden": false
+            },
+            "type": "pie",
+            "hideTooMuchData": {
+              "active": true,
+              "value": 502,
+              "message": "To protect the browser performance, a limit of output records has been imposed on the widget. Please apply filters or narrow down the analysed time frame to display the results."
+            },
+            "hideTooMuchInputData": {
+              "active": false
+            },
+            "noData": {
+              "active": false
+            },
+            "animation": true,
+            "drilldown": [],
+            "showLocalQuerySwitch": false,
+            "displayValuesOnXAxis": false,
+            "yAxes": [
+              {
+                "series": [
+                  0
+                ],
+                "position": "default",
+                "useCustomName": false,
+                "showAxisLabels": true,
+                "axisLabelStyles": {
+                  "nameTextStyle": {
+                    "fontWeight": "normal",
+                    "fontSize": 12
+                  }
+                },
+                "width": 100,
+                "labelAngle": 0,
+                "labelPosition": "outside",
+                "forceAllLabels": false,
+                "formatting": {
+                  "formattingType": "off"
+                },
+                "logScale": false,
+                "inverse": false,
+                "barCategoryGapCustom": false,
+                "axisLine": {
+                  "custom": false
+                },
+                "splitLine": {
+                  "custom": false
+                },
+                "axisPointerConfig": {
+                  "show": false,
+                  "snap": false,
+                  "type": "shadow"
+                }
+              }
+            ],
+            "xAxes": [
+              {
+                "series": [
+                  0
+                ],
+                "position": "default",
+                "useCustomName": false,
+                "showAxisLabels": true,
+                "axisLabelStyles": {
+                  "nameTextStyle": {
+                    "fontWeight": "normal",
+                    "fontSize": 12
+                  }
+                },
+                "width": 100,
+                "labelAngle": 0,
+                "labelPosition": "outside",
+                "forceAllLabels": false,
+                "formatting": {
+                  "formattingType": "off"
+                },
+                "logScale": false,
+                "inverse": false,
+                "barCategoryGapCustom": false,
+                "axisLine": {
+                  "custom": false
+                },
+                "splitLine": {
+                  "custom": false
+                },
+                "axisPointerConfig": {
+                  "show": true,
+                  "snap": true,
+                  "type": "shadow"
+                }
+              }
+            ],
+            "showLegend": true,
+            "legendPosition": "top",
+            "showLegendMetricName": false,
+            "legendIcons": "radio",
+            "showInSingleMode": false,
+            "showSimpleChartTitle": true,
+            "chartAreaConfig": {
+              "active": false
+            }
+          }
+        },
+        "data": {
+          "dataMode": "advanced",
+          "source": {
+            "name": "suricata",
+            "type": "stream",
+            "isRaw": true,
+            "base": "suricata",
+            "resolution": ""
+          },
+          "query": {
+            "timerange": {
+              "from": "now-24hours",
+              "to": "now",
+              "roundTo": "hour"
+            },
+            "query": "",
+            "advanced": false
+          },
+          "outputQuery": {},
+          "aggs": {
+            "metrics": [
+              {
+                "metric": "dns_rrtype",
+                "metricName": "DNS Record Type",
+                "useAggr": true,
+                "field": "dns_rrtype",
+                "fieldType": "field",
+                "aggregation": "count",
+                "aggrParams": {},
+                "fn": {
+                  "aggr": "countRrtype=count(dns_rrtype)",
+                  "postAggr": ""
+                },
+                "alias": "countRrtype",
+                "includeNullValues": true,
+                "includeZeroValues": true,
+                "includeEmptyValues": true
+              }
+            ],
+            "buckets": [
+              {
+                "aggregation": "terms",
+                "useFn": false,
+                "bucket": "dns_rrtype",
+                "field": "dns_rrtype",
+                "alias": "dns_rrtype",
+                "preFn": "dns_rrtype",
+                "autoBucket": true,
+                "interval": "5m",
+                "includeNullValues": true,
+                "includeZeroValues": true,
+                "includeEmptyValues": true,
+                "includeEmptyListValues": true,
+                "limit": {
+                  "active": false
+                },
+                "filterFn": {
+                  "custom": false
+                },
+                "unwindCollection": false,
+                "isCollectionFieldType": false,
+                "isNumberFieldType": false,
+                "isStringFieldType": true
+              }
+            ]
+          },
+          "sorters": [],
+          "limit": {
+            "active": true,
+            "limit": 10,
+            "from": "head",
+            "othersShow": false
+          },
+          "queries": [
+            {
+              "nql": "src event_type = \"dns\" | aggr countRrtype=count(dns_rrtype) by dns_rrtype as dns_rrtype | sort countRrtype desc | limit 10",
+              "subpipes": []
+            }
+          ],
+          "includeTotal": {
+            "hidden": false
+          },
+          "columns": []
+        },
+        "version": 31,
+        "options": {},
+        "entitySet": "COMPONENT",
+        "entityType": "visualization",
+        "annotations": null,
+        "_qbId": "e58ea295-d0714b11-9c5e8c37",
+        "permissions": {
+          "entityId": "e58ea295-d0714b11-9c5e8c37",
+          "entityType": "COMPONENT.visualization",
+          "canAdd": true,
+          "canView": true,
+          "canEdit": true,
+          "canDelete": true,
+          "canExecute": true,
+          "canModifyOwner": true,
+          "canGrantPermissions": true
+        }
+      },
+      "style": {
+        "padding": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "layout": {
+        "id": "999dc1af-bd3a-4f4f-ba90-24916b5ca481",
+        "header": null,
+        "w": 8,
+        "h": 6,
+        "x": 0,
+        "y": 6,
+        "moved": false,
+        "static": false
+      },
+      "config": {
+        "$ref": "9fc5a87e-36ae4dba-a5800454",
+        "id": "9fc5a87e-36ae4dba-a5800454",
+        "name": "Suricata - HTTP Requests Over Time",
+        "type": "visualization",
+        "tags": null,
+        "createdBy": "admin",
+        "modifiedBy": "admin",
+        "created": 1770825045664,
+        "modified": 1770825045664,
+        "visualizationConfig": {
+          "type": "chart",
+          "concreteVisualizationConfig": {
+            "dataKey": "countHttpMethod",
+            "dataKeys": [
+              "countHttpMethod"
+            ],
+            "categoryKey": "srcEventTimestamp",
+            "categoryKeys": [
+              "srcEventTimestamp",
+              "http_method"
+            ],
+            "formatting": {
+              "metrics": [
+                {
+                  "formattingType": "off"
+                }
+              ],
+              "buckets": [
+                {
+                  "formattingType": "date",
+                  "formattingPattern": "yyyy-MM-dd HH:mm"
+                },
+                null
+              ]
+            },
+            "names": {
+              "metrics": [
+                {
+                  "custom": false,
+                  "value": "count(HTTP Method)"
+                }
+              ],
+              "buckets": [
+                {
+                  "custom": false,
+                  "value": "Time"
+                },
+                {
+                  "custom": false,
+                  "value": "HTTP Method"
+                }
+              ]
+            },
+            "colors": {
+              "metrics": [
+                {
+                  "useCustomColor": false,
+                  "useDefaultColor": true
+                }
+              ]
+            },
+            "thresholds": {
+              "metrics": [
+                null
+              ]
+            },
+            "areThresholdsAbsolute": {
+              "metrics": [
+                null
+              ]
+            },
+            "baselines": [],
+            "baselineMetrics": {},
+            "baselineKeys": [],
+            "defaultFilterStream": [
+              "suricata",
+              "suricata"
+            ],
+            "isCategoryDate": true,
+            "categoryDateInterval": "5m",
+            "autoBucket": true,
+            "timeKeys": [
+              "srcEventTimestamp"
+            ],
+            "splitKeys": [
+              "http_method"
+            ],
+            "splitChartsKeys": [],
+            "splitSeriesKeys": [
+              "http_method"
+            ],
+            "joinDataCategories": [
+              "srcEventTimestamp"
+            ],
+            "gridIndexes": [
+              0
+            ],
+            "markers": [
+              {
+                "maxMarker": {},
+                "minMarker": {},
+                "maxLine": {},
+                "minLine": {},
+                "avgLine": {}
+              }
+            ],
+            "stack": {
+              "metrics": [
+                "Type"
+              ]
+            },
+            "valueConfigs": {
+              "metrics": [
+                {
+                  "showLabels": false
+                }
+              ]
+            },
+            "active": {
+              "metrics": [
+                true
+              ]
+            },
+            "sort": "desc",
+            "includeTotal": {
+              "hidden": false
+            },
+            "type": "bar",
+            "hideTooMuchData": {
+              "active": true,
+              "value": 502,
+              "message": "To protect the browser performance, a limit of output records has been imposed on the widget. Please apply filters or narrow down the analysed time frame to display the results."
+            },
+            "hideTooMuchInputData": {
+              "active": false
+            },
+            "noData": {
+              "active": false
+            },
+            "animation": true,
+            "drilldown": [],
+            "showLocalQuerySwitch": false,
+            "displayValuesOnXAxis": false,
+            "yAxes": [
+              {
+                "series": [
+                  0
+                ],
+                "position": "default",
+                "useCustomName": false,
+                "showAxisLabels": true,
+                "axisLabelStyles": {
+                  "nameTextStyle": {
+                    "fontWeight": "normal",
+                    "fontSize": 12
+                  }
+                },
+                "width": 100,
+                "labelAngle": 0,
+                "labelPosition": "outside",
+                "forceAllLabels": false,
+                "formatting": {
+                  "formattingType": "off"
+                },
+                "logScale": false,
+                "inverse": false,
+                "barCategoryGapCustom": false,
+                "axisLine": {
+                  "custom": false
+                },
+                "splitLine": {
+                  "custom": false
+                },
+                "axisPointerConfig": {
+                  "show": false,
+                  "snap": false,
+                  "type": "shadow"
+                }
+              }
+            ],
+            "xAxes": [
+              {
+                "series": [
+                  0
+                ],
+                "position": "default",
+                "useCustomName": false,
+                "showAxisLabels": true,
+                "axisLabelStyles": {
+                  "nameTextStyle": {
+                    "fontWeight": "normal",
+                    "fontSize": 12
+                  }
+                },
+                "width": 100,
+                "labelAngle": 0,
+                "labelPosition": "outside",
+                "forceAllLabels": false,
+                "formatting": {
+                  "formattingType": "off"
+                },
+                "logScale": false,
+                "inverse": false,
+                "barCategoryGapCustom": false,
+                "axisLine": {
+                  "custom": false
+                },
+                "splitLine": {
+                  "custom": false
+                },
+                "axisPointerConfig": {
+                  "show": true,
+                  "snap": true,
+                  "type": "shadow"
+                }
+              }
+            ],
+            "showLegend": true,
+            "legendPosition": "top",
+            "showLegendMetricName": false,
+            "legendIcons": "radio",
+            "showInSingleMode": false,
+            "showSimpleChartTitle": true,
+            "chartAreaConfig": {
+              "active": false
+            }
+          }
+        },
+        "data": {
+          "dataMode": "advanced",
+          "source": {
+            "name": "suricata",
+            "type": "stream",
+            "isRaw": true,
+            "base": "suricata",
+            "resolution": ""
+          },
+          "query": {
+            "timerange": {
+              "from": "now-24hours",
+              "to": "now",
+              "roundTo": "hour"
+            },
+            "query": "",
+            "advanced": false
+          },
+          "outputQuery": {},
+          "aggs": {
+            "metrics": [
+              {
+                "metric": "http_method",
+                "metricName": "HTTP Method",
+                "useAggr": true,
+                "field": "http_method",
+                "fieldType": "field",
+                "aggregation": "count",
+                "aggrParams": {},
+                "fn": {
+                  "aggr": "countHttpMethod=count(http_method)",
+                  "postAggr": ""
+                },
+                "alias": "countHttpMethod",
+                "includeNullValues": true,
+                "includeZeroValues": true,
+                "includeEmptyValues": true
+              }
+            ],
+            "buckets": [
+              {
+                "aggregation": "timeAggr",
+                "bucket": "timestamp",
+                "field": "timestamp",
+                "alias": "srcEventTimestamp",
+                "preFn": "timestamp",
+                "autoBucket": true,
+                "interval": "5m",
+                "includeNullValues": true,
+                "includeZeroValues": true,
+                "includeEmptyValues": true,
+                "includeEmptyListValues": true,
+                "limit": {
+                  "active": true,
+                  "type": "top",
+                  "limit": 10,
+                  "byMetric": "",
+                  "byMetricSort": "desc",
+                  "byField": [],
+                  "inverted": false,
+                  "showOthers": false
+                },
+                "filterFn": {
+                  "custom": false
+                },
+                "unwindCollection": false,
+                "isCollectionFieldType": false,
+                "isNumberFieldType": false,
+                "isStringFieldType": false
+              },
+              {
+                "aggregation": "terms",
+                "useFn": false,
+                "bucket": "http_method",
+                "field": "http_method",
+                "alias": "http_method",
+                "preFn": "http_method",
+                "autoBucket": true,
+                "interval": "5m",
+                "includeNullValues": true,
+                "includeZeroValues": true,
+                "includeEmptyValues": true,
+                "includeEmptyListValues": true,
+                "limit": {
+                  "active": true,
+                  "type": "top",
+                  "limit": 10,
+                  "byMetric": "",
+                  "byMetricSort": "desc",
+                  "byField": [],
+                  "inverted": false,
+                  "showOthers": false
+                },
+                "filterFn": {
+                  "custom": false
+                },
+                "unwindCollection": false,
+                "isCollectionFieldType": false,
+                "isNumberFieldType": false,
+                "isStringFieldType": true,
+                "splitChart": false
+              }
+            ]
+          },
+          "sorters": [],
+          "limit": {
+            "active": true,
+            "limit": 100,
+            "from": "head",
+            "othersShow": false
+          },
+          "queries": [
+            {
+              "nql": "src event_type = \"http\" | (valInColl(http_method, \"9fc5a87e-36ae4dba-a5800454_0_http_method_bucket-limit\", \"http_method\") OR http_method = null) | timeAggr countHttpMethod=count(http_method) on timestamp by http_method as http_method interval=\"${AUTOBUCKET_INTERVAL}\" dir=\"desc\" unwind=true bucketAlias=\"srcEventTimestamp\" | limit 100",
+              "subpipes": [
+                {
+                  "nql": "${LIMIT_SOURCE} | neq(null, http_method) | aggr countHttpMethod=count(http_method) by http_method as http_method unwind=true | sort countHttpMethod desc | limit 10 | dst \"9fc5a87e-36ae4dba-a5800454_0_http_method_bucket-limit\""
+                }
+              ]
+            }
+          ],
+          "includeTotal": {
+            "hidden": false
+          },
+          "columns": []
+        },
+        "version": 31,
+        "options": {},
+        "entitySet": "COMPONENT",
+        "entityType": "visualization",
+        "annotations": null,
+        "_qbId": "9fc5a87e-36ae4dba-a5800454",
+        "permissions": {
+          "entityId": "9fc5a87e-36ae4dba-a5800454",
+          "entityType": "COMPONENT.visualization",
+          "canAdd": true,
+          "canView": true,
+          "canEdit": true,
+          "canDelete": true,
+          "canExecute": true,
+          "canModifyOwner": true,
+          "canGrantPermissions": true
+        }
+      },
+      "style": {
+        "padding": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "layout": {
+        "id": "6314c224-c877-46c9-b60b-4470edac9e8f",
+        "header": null,
+        "w": 10,
+        "h": 6,
+        "x": 8,
+        "y": 6,
+        "moved": false,
+        "static": false
+      },
+      "config": {
+        "$ref": "47c10a62-bb9e4292-87ae9f61",
+        "id": "47c10a62-bb9e4292-87ae9f61",
+        "name": "Suricata - Top HTTP Hosts",
+        "type": "visualization",
+        "tags": null,
+        "createdBy": "admin",
+        "modifiedBy": "admin",
+        "created": 1770825045664,
+        "modified": 1770825045664,
+        "visualizationConfig": {
+          "type": "table",
+          "concreteVisualizationConfig": {
+            "dataKey": "http_method",
+            "dataKeys": [
+              "http_method",
+              "http_url",
+              "countHttp"
+            ],
+            "categoryKey": "http_hostname",
+            "categoryKeys": [
+              "http_hostname"
+            ],
+            "formatting": {
+              "metrics": [
+                null,
+                null,
+                {
+                  "formattingType": "off"
+                }
+              ],
+              "buckets": [
+                {
+                  "formattingType": "off"
+                }
+              ]
+            },
+            "names": {
+              "metrics": [
+                {
+                  "value": "first(http_method)"
+                },
+                {
+                  "value": "first(http_url)"
+                },
+                {
+                  "custom": false,
+                  "value": "count(http_hostname)"
+                }
+              ],
+              "buckets": [
+                {
+                  "custom": true,
+                  "value": "Host"
+                }
+              ]
+            },
+            "colors": {
+              "metrics": [
+                {
+                  "useDefaultColor": true
+                },
+                {
+                  "useDefaultColor": true
+                },
+                {
+                  "useDefaultColor": true
+                }
+              ]
+            },
+            "thresholds": {
+              "metrics": [
+                null,
+                null,
+                null
+              ]
+            },
+            "areThresholdsAbsolute": {
+              "metrics": [
+                null,
+                null,
+                null
+              ]
+            },
+            "baselines": [],
+            "baselineMetrics": {},
+            "baselineKeys": [],
+            "defaultFilterStream": [
+              "suricata"
+            ],
+            "columns": [
+              {
+                "active": true,
+                "columnType": "bucket",
+                "alias": "http_hostname",
+                "aggregation": "terms",
+                "field": "http_hostname",
+                "fieldName": "http_hostname",
+                "useFn": false,
+                "isSavedField": false,
+                "fn": {},
+                "bucket": "http_hostname",
+                "preFn": "http_hostname",
+                "filterFn": {
+                  "custom": false
+                },
+                "isStringFieldType": true,
+                "isNumberFieldType": false,
+                "isCollectionFieldType": false,
+                "unwindCollection": false,
+                "autoBucket": true,
+                "interval": "5m",
+                "visualOptions": {
+                  "label": "Host",
+                  "showLabel": true,
+                  "align": "left"
+                },
+                "formatting": {
+                  "formattingType": "off"
+                },
+                "defaultColAutoWidth": true,
+                "backgroundColor": {
+                  "useCustomColor": false
+                },
+                "foregroundColor": {
+                  "useCustomColor": false
+                },
+                "countBar": {
+                  "active": false
+                },
+                "includeNullValues": true,
+                "includeEmptyValues": true,
+                "includeEmptyListValues": true,
+                "includeZeroValues": true,
+                "limit": {
+                  "active": false
+                },
+                "showAddFilterButton": true,
+                "defaultFilterStream": "suricata",
+                "dataField": "http_hostname"
+              },
+              {
+                "active": true,
+                "columnType": "column",
+                "alias": "http_method",
+                "field": "http_method",
+                "fieldName": "http_method",
+                "fieldType": "field",
+                "useFn": false,
+                "isSavedField": false,
+                "fn": {},
+                "preFn": "http_method",
+                "column": "http_method",
+                "visualOptions": {
+                  "label": "Method",
+                  "showLabel": true,
+                  "align": "left"
+                },
+                "formatting": {
+                  "formattingType": "off"
+                },
+                "backgroundColor": {
+                  "useCustomColor": false
+                },
+                "foregroundColor": {
+                  "useCustomColor": false
+                },
+                "countBar": {
+                  "active": false
+                },
+                "includeNullValues": true,
+                "includeEmptyValues": true,
+                "includeEmptyListValues": true,
+                "includeZeroValues": true,
+                "limit": {
+                  "active": false
+                },
+                "showAddFilterButton": true,
+                "defaultFilterStream": "suricata",
+                "dataField": "http_method",
+                "isStringFieldType": true,
+                "isCollectionFieldType": false,
+                "isNumberFieldType": false
+              },
+              {
+                "active": true,
+                "columnType": "column",
+                "alias": "http_url",
+                "field": "http_url",
+                "fieldName": "http_url",
+                "fieldType": "field",
+                "useFn": false,
+                "isSavedField": false,
+                "fn": {},
+                "preFn": "http_url",
+                "column": "http_url",
+                "visualOptions": {
+                  "label": "URL",
+                  "showLabel": true,
+                  "align": "left"
+                },
+                "formatting": {
+                  "formattingType": "off"
+                },
+                "backgroundColor": {
+                  "useCustomColor": false
+                },
+                "foregroundColor": {
+                  "useCustomColor": false
+                },
+                "countBar": {
+                  "active": false
+                },
+                "includeNullValues": true,
+                "includeEmptyValues": true,
+                "includeEmptyListValues": true,
+                "includeZeroValues": true,
+                "limit": {
+                  "active": false
+                },
+                "showAddFilterButton": true,
+                "defaultFilterStream": "suricata",
+                "dataField": "http_url",
+                "isStringFieldType": true,
+                "isCollectionFieldType": false,
+                "isNumberFieldType": false
+              },
+              {
+                "active": true,
+                "columnType": "metric",
+                "metric": "http_hostname",
+                "alias": "countHttp",
+                "aggregation": "count",
+                "useAggr": true,
+                "metricName": "Host",
+                "field": "http_hostname",
+                "fieldName": "count(http_hostname)",
+                "fieldType": "field",
+                "aggrParams": {},
+                "fn": {
+                  "aggr": "countHttp=count(http_hostname)",
+                  "postAggr": ""
+                },
+                "visualOptions": {
+                  "label": "count(http_hostname)",
+                  "showLabel": false,
+                  "align": "left"
+                },
+                "formatting": {
+                  "formattingType": "off"
+                },
+                "defaultColAutoWidth": false,
+                "backgroundColor": {
+                  "useCustomColor": false
+                },
+                "foregroundColor": {
+                  "useCustomColor": false
+                },
+                "metricBar": {
+                  "active": false
+                },
+                "includeNullValues": true,
+                "includeEmptyValues": true,
+                "includeEmptyListValues": true,
+                "includeZeroValues": true,
+                "limit": {
+                  "active": false
+                },
+                "showAddFilterButton": true,
+                "defaultFilterStream": "suricata",
+                "dataField": "countHttp",
+                "isStringFieldType": true,
+                "isCollectionFieldType": false,
+                "isNumberFieldType": false
+              }
+            ],
+            "includeTotal": {
+              "active": false,
+              "hidden": false
+            },
+            "groupRowsByOrder": 1,
+            "type": "table",
+            "hideTooMuchData": {
+              "active": true,
+              "value": 502,
+              "message": "To protect the browser performance, a limit of output records has been imposed on the widget. Please apply filters or narrow down the analysed time frame to display the results."
+            },
+            "hideTooMuchInputData": {
+              "active": false
+            },
+            "noData": {
+              "active": false
+            },
+            "drilldown": [],
+            "showLocalQuerySwitch": false,
+            "globalFilter": true,
+            "filterable": true,
+            "sortable": true,
+            "displayValuesOnXAxis": false,
+            "rowGroupMode": null,
+            "groupRowsBy": null
+          }
+        },
+        "data": {
+          "dataMode": "advanced",
+          "source": {
+            "name": "suricata",
+            "type": "stream",
+            "isRaw": true,
+            "base": "suricata",
+            "resolution": ""
+          },
+          "query": {
+            "timerange": {
+              "from": "now-24hours",
+              "to": "now",
+              "roundTo": "hour"
+            },
+            "query": "",
+            "advanced": false
+          },
+          "outputQuery": {},
+          "aggs": {
+            "metrics": [
+              {
+                "metric": "http_method",
+                "field": "http_method",
+                "aggregation": "first",
+                "fn": {
+                  "aggr": "http_method=first(http_method)"
+                },
+                "alias": "http_method"
+              },
+              {
+                "metric": "http_url",
+                "field": "http_url",
+                "aggregation": "first",
+                "fn": {
+                  "aggr": "http_url=first(http_url)"
+                },
+                "alias": "http_url"
+              },
+              {
+                "metric": "http_hostname",
+                "metricName": "Host",
+                "useAggr": true,
+                "field": "http_hostname",
+                "fieldType": "field",
+                "aggregation": "count",
+                "aggrParams": {},
+                "fn": {
+                  "aggr": "countHttp=count(http_hostname)",
+                  "postAggr": ""
+                },
+                "alias": "countHttp",
+                "includeNullValues": true,
+                "includeZeroValues": true,
+                "includeEmptyValues": true
+              }
+            ],
+            "buckets": [
+              {
+                "aggregation": "terms",
+                "useFn": false,
+                "bucket": "http_hostname",
+                "field": "http_hostname",
+                "alias": "http_hostname",
+                "preFn": "http_hostname",
+                "autoBucket": true,
+                "interval": "5m",
+                "includeNullValues": true,
+                "includeZeroValues": true,
+                "includeEmptyValues": true,
+                "includeEmptyListValues": true,
+                "limit": {
+                  "active": false
+                },
+                "filterFn": {
+                  "custom": false
+                },
+                "unwindCollection": false,
+                "isCollectionFieldType": false,
+                "isNumberFieldType": false,
+                "isStringFieldType": true
+              }
+            ]
+          },
+          "sorters": [
+            {
+              "field": "countHttp",
+              "direction": "desc",
+              "description": "count(http_hostname) (desc)"
+            }
+          ],
+          "limit": {
+            "active": true,
+            "limit": 50,
+            "from": "head",
+            "othersShow": false
+          },
+          "queries": [
+            {
+              "nql": "src event_type = \"http\" | aggr http_method=first(http_method), http_url=first(http_url), countHttp=count(http_hostname) by http_hostname as http_hostname | sort countHttp desc | limit 50",
+              "subpipes": []
+            }
+          ],
+          "columns": [
+            {
+              "active": true,
+              "columnType": "bucket",
+              "alias": "http_hostname",
+              "aggregation": "terms",
+              "field": "http_hostname",
+              "fieldName": "http_hostname",
+              "useFn": false,
+              "isSavedField": false,
+              "fn": {},
+              "bucket": "http_hostname",
+              "preFn": "http_hostname",
+              "filterFn": {
+                "custom": false
+              },
+              "isStringFieldType": true,
+              "isNumberFieldType": false,
+              "isCollectionFieldType": false,
+              "unwindCollection": false,
+              "autoBucket": true,
+              "interval": "5m",
+              "visualOptions": {
+                "label": "Host",
+                "showLabel": true,
+                "align": "left"
+              },
+              "formatting": {
+                "formattingType": "off"
+              },
+              "defaultColAutoWidth": true,
+              "backgroundColor": {
+                "useCustomColor": false
+              },
+              "foregroundColor": {
+                "useCustomColor": false
+              },
+              "countBar": {
+                "active": false
+              },
+              "includeNullValues": true,
+              "includeEmptyValues": true,
+              "includeEmptyListValues": true,
+              "includeZeroValues": true,
+              "limit": {
+                "active": false
+              },
+              "showAddFilterButton": true,
+              "defaultFilterStream": "suricata",
+              "dataField": "http_hostname"
+            },
+            {
+              "active": true,
+              "columnType": "column",
+              "alias": "http_method",
+              "field": "http_method",
+              "fieldName": "http_method",
+              "fieldType": "field",
+              "useFn": false,
+              "isSavedField": false,
+              "fn": {},
+              "preFn": "http_method",
+              "column": "http_method",
+              "visualOptions": {
+                "label": "Method",
+                "showLabel": true,
+                "align": "left"
+              },
+              "formatting": {
+                "formattingType": "off"
+              },
+              "backgroundColor": {
+                "useCustomColor": false
+              },
+              "foregroundColor": {
+                "useCustomColor": false
+              },
+              "countBar": {
+                "active": false
+              },
+              "includeNullValues": true,
+              "includeEmptyValues": true,
+              "includeEmptyListValues": true,
+              "includeZeroValues": true,
+              "limit": {
+                "active": false
+              },
+              "showAddFilterButton": true,
+              "defaultFilterStream": "suricata",
+              "dataField": "http_method",
+              "isStringFieldType": true,
+              "isCollectionFieldType": false,
+              "isNumberFieldType": false
+            },
+            {
+              "active": true,
+              "columnType": "column",
+              "alias": "http_url",
+              "field": "http_url",
+              "fieldName": "http_url",
+              "fieldType": "field",
+              "useFn": false,
+              "isSavedField": false,
+              "fn": {},
+              "preFn": "http_url",
+              "column": "http_url",
+              "visualOptions": {
+                "label": "URL",
+                "showLabel": true,
+                "align": "left"
+              },
+              "formatting": {
+                "formattingType": "off"
+              },
+              "backgroundColor": {
+                "useCustomColor": false
+              },
+              "foregroundColor": {
+                "useCustomColor": false
+              },
+              "countBar": {
+                "active": false
+              },
+              "includeNullValues": true,
+              "includeEmptyValues": true,
+              "includeEmptyListValues": true,
+              "includeZeroValues": true,
+              "limit": {
+                "active": false
+              },
+              "showAddFilterButton": true,
+              "defaultFilterStream": "suricata",
+              "dataField": "http_url",
+              "isStringFieldType": true,
+              "isCollectionFieldType": false,
+              "isNumberFieldType": false
+            },
+            {
+              "active": true,
+              "columnType": "metric",
+              "metric": "http_hostname",
+              "alias": "countHttp",
+              "aggregation": "count",
+              "useAggr": true,
+              "metricName": "Host",
+              "field": "http_hostname",
+              "fieldName": "count(http_hostname)",
+              "fieldType": "field",
+              "aggrParams": {},
+              "fn": {
+                "aggr": "countHttp=count(http_hostname)",
+                "postAggr": ""
+              },
+              "visualOptions": {
+                "label": "count(http_hostname)",
+                "showLabel": false,
+                "align": "left"
+              },
+              "formatting": {
+                "formattingType": "off"
+              },
+              "defaultColAutoWidth": false,
+              "backgroundColor": {
+                "useCustomColor": false
+              },
+              "foregroundColor": {
+                "useCustomColor": false
+              },
+              "metricBar": {
+                "active": false
+              },
+              "includeNullValues": true,
+              "includeEmptyValues": true,
+              "includeEmptyListValues": true,
+              "includeZeroValues": true,
+              "limit": {
+                "active": false
+              },
+              "showAddFilterButton": true,
+              "defaultFilterStream": "suricata",
+              "dataField": "countHttp",
+              "isStringFieldType": true,
+              "isCollectionFieldType": false,
+              "isNumberFieldType": false
+            }
+          ],
+          "includeTotal": {
+            "active": false,
+            "hidden": false
+          }
+        },
+        "version": 31,
+        "options": {},
+        "entitySet": "COMPONENT",
+        "entityType": "visualization",
+        "annotations": null,
+        "_qbId": "47c10a62-bb9e4292-87ae9f61",
+        "permissions": {
+          "entityId": "47c10a62-bb9e4292-87ae9f61",
+          "entityType": "COMPONENT.visualization",
+          "canAdd": true,
+          "canView": true,
+          "canEdit": true,
+          "canDelete": true,
+          "canExecute": true,
+          "canModifyOwner": true,
+          "canGrantPermissions": true
+        }
+      },
+      "style": {
+        "padding": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "layout": {
+        "id": "6639222e-e7f0-47d1-bbe3-731134b38e87",
+        "header": null,
+        "w": 6,
+        "h": 6,
+        "x": 18,
+        "y": 6,
+        "moved": false,
+        "static": false
+      },
+      "config": {
+        "$ref": "44796f04-f3f94805-9c8c4c30",
+        "id": "44796f04-f3f94805-9c8c4c30",
+        "name": "Suricata - HTTP Status Codes",
+        "type": "visualization",
+        "tags": null,
+        "createdBy": "admin",
+        "modifiedBy": "admin",
+        "created": 1770825045664,
+        "modified": 1770825045664,
+        "visualizationConfig": {
+          "type": "chart",
+          "concreteVisualizationConfig": {
+            "dataKey": "countStatus",
+            "dataKeys": [
+              "countStatus"
+            ],
+            "categoryKey": "http_status",
+            "categoryKeys": [
+              "http_status"
+            ],
+            "formatting": {
+              "metrics": [
+                {
+                  "formattingType": "off"
+                }
+              ],
+              "buckets": [
+                {
+                  "formattingType": "off"
+                }
+              ]
+            },
+            "names": {
+              "metrics": [
+                {
+                  "custom": false,
+                  "value": "count(HTTP Status Code)"
+                }
+              ],
+              "buckets": [
+                {
+                  "custom": false,
+                  "value": "HTTP Status Code"
+                }
+              ]
+            },
+            "colors": {
+              "metrics": [
+                {
+                  "useCustomColor": false,
+                  "useDefaultColor": true
+                }
+              ]
+            },
+            "thresholds": {
+              "metrics": [
+                null
+              ]
+            },
+            "areThresholdsAbsolute": {
+              "metrics": [
+                null
+              ]
+            },
+            "baselines": [],
+            "baselineMetrics": {},
+            "baselineKeys": [],
+            "defaultFilterStream": [
+              "suricata"
+            ],
+            "isCategoryDate": false,
+            "categoryDateInterval": "5m",
+            "autoBucket": false,
+            "timeKeys": [],
+            "splitKeys": [],
+            "splitChartsKeys": [],
+            "splitSeriesKeys": [],
+            "joinDataCategories": [],
+            "gridIndexes": [
+              0
+            ],
+            "markers": [
+              {
+                "maxMarker": {},
+                "minMarker": {},
+                "maxLine": {},
+                "minLine": {},
+                "avgLine": {}
+              }
+            ],
+            "stack": {
+              "metrics": [
+                null
+              ]
+            },
+            "valueConfigs": {
+              "metrics": [
+                {
+                  "showLabels": false
+                }
+              ]
+            },
+            "active": {
+              "metrics": [
+                true
+              ]
+            },
+            "sort": "desc",
+            "includeTotal": {
+              "hidden": false
+            },
+            "type": "pie",
+            "hideTooMuchData": {
+              "active": true,
+              "value": 502,
+              "message": "To protect the browser performance, a limit of output records has been imposed on the widget. Please apply filters or narrow down the analysed time frame to display the results."
+            },
+            "hideTooMuchInputData": {
+              "active": false
+            },
+            "noData": {
+              "active": false
+            },
+            "animation": true,
+            "drilldown": [],
+            "showLocalQuerySwitch": false,
+            "displayValuesOnXAxis": false,
+            "yAxes": [
+              {
+                "series": [
+                  0
+                ],
+                "position": "default",
+                "useCustomName": false,
+                "showAxisLabels": true,
+                "axisLabelStyles": {
+                  "nameTextStyle": {
+                    "fontWeight": "normal",
+                    "fontSize": 12
+                  }
+                },
+                "width": 100,
+                "labelAngle": 0,
+                "labelPosition": "outside",
+                "forceAllLabels": false,
+                "formatting": {
+                  "formattingType": "off"
+                },
+                "logScale": false,
+                "inverse": false,
+                "barCategoryGapCustom": false,
+                "axisLine": {
+                  "custom": false
+                },
+                "splitLine": {
+                  "custom": false
+                },
+                "axisPointerConfig": {
+                  "show": false,
+                  "snap": false,
+                  "type": "shadow"
+                }
+              }
+            ],
+            "xAxes": [
+              {
+                "series": [
+                  0
+                ],
+                "position": "default",
+                "useCustomName": false,
+                "showAxisLabels": true,
+                "axisLabelStyles": {
+                  "nameTextStyle": {
+                    "fontWeight": "normal",
+                    "fontSize": 12
+                  }
+                },
+                "width": 100,
+                "labelAngle": 0,
+                "labelPosition": "outside",
+                "forceAllLabels": false,
+                "formatting": {
+                  "formattingType": "off"
+                },
+                "logScale": false,
+                "inverse": false,
+                "barCategoryGapCustom": false,
+                "axisLine": {
+                  "custom": false
+                },
+                "splitLine": {
+                  "custom": false
+                },
+                "axisPointerConfig": {
+                  "show": true,
+                  "snap": true,
+                  "type": "shadow"
+                }
+              }
+            ],
+            "showLegend": true,
+            "legendPosition": "top",
+            "showLegendMetricName": false,
+            "legendIcons": "radio",
+            "showInSingleMode": false,
+            "showSimpleChartTitle": true,
+            "chartAreaConfig": {
+              "active": false
+            }
+          }
+        },
+        "data": {
+          "dataMode": "advanced",
+          "source": {
+            "name": "suricata",
+            "type": "stream",
+            "isRaw": true,
+            "base": "suricata",
+            "resolution": ""
+          },
+          "query": {
+            "timerange": {
+              "from": "now-24hours",
+              "to": "now",
+              "roundTo": "hour"
+            },
+            "query": "",
+            "advanced": false
+          },
+          "outputQuery": {},
+          "aggs": {
+            "metrics": [
+              {
+                "metric": "http_status",
+                "metricName": "HTTP Status Code",
+                "useAggr": true,
+                "field": "http_status",
+                "fieldType": "field",
+                "aggregation": "count",
+                "aggrParams": {},
+                "fn": {
+                  "aggr": "countStatus=count(http_status)",
+                  "postAggr": ""
+                },
+                "alias": "countStatus",
+                "includeNullValues": true,
+                "includeZeroValues": true,
+                "includeEmptyValues": true
+              }
+            ],
+            "buckets": [
+              {
+                "aggregation": "terms",
+                "useFn": false,
+                "bucket": "http_status",
+                "field": "http_status",
+                "alias": "http_status",
+                "preFn": "http_status",
+                "autoBucket": true,
+                "interval": "5m",
+                "includeNullValues": true,
+                "includeZeroValues": true,
+                "includeEmptyValues": true,
+                "includeEmptyListValues": true,
+                "limit": {
+                  "active": false
+                },
+                "filterFn": {
+                  "custom": false
+                },
+                "unwindCollection": false,
+                "isCollectionFieldType": false,
+                "isNumberFieldType": false,
+                "isStringFieldType": true
+              }
+            ]
+          },
+          "sorters": [],
+          "limit": {
+            "active": true,
+            "limit": 10,
+            "from": "head",
+            "othersShow": false
+          },
+          "queries": [
+            {
+              "nql": "src event_type = \"http\" | aggr countStatus=count(http_status) by http_status as http_status | sort countStatus desc | limit 10",
+              "subpipes": []
+            }
+          ],
+          "includeTotal": {
+            "hidden": false
+          },
+          "columns": []
+        },
+        "version": 31,
+        "options": {},
+        "entitySet": "COMPONENT",
+        "entityType": "visualization",
+        "annotations": null,
+        "_qbId": "44796f04-f3f94805-9c8c4c30",
+        "permissions": {
+          "entityId": "44796f04-f3f94805-9c8c4c30",
+          "entityType": "COMPONENT.visualization",
+          "canAdd": true,
+          "canView": true,
+          "canEdit": true,
+          "canDelete": true,
+          "canExecute": true,
+          "canModifyOwner": true,
+          "canGrantPermissions": true
+        }
+      },
+      "style": {
+        "padding": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "layout": {
+        "id": "b9159524-c22f-4b7a-ad20-cf4e564e66a5",
+        "header": null,
+        "w": 8,
+        "h": 6,
+        "x": 0,
+        "y": 12,
+        "moved": false,
+        "static": false
+      },
+      "config": {
+        "$ref": "47c4f15a-f9444603-812264be",
+        "id": "47c4f15a-f9444603-812264be",
+        "name": "Suricata - TLS Connections Over Time",
+        "type": "visualization",
+        "tags": null,
+        "createdBy": "admin",
+        "modifiedBy": "admin",
+        "created": 1770825045664,
+        "modified": 1770825045664,
+        "visualizationConfig": {
+          "type": "chart",
+          "concreteVisualizationConfig": {
+            "dataKey": "countTlsVersion",
+            "dataKeys": [
+              "countTlsVersion"
+            ],
+            "categoryKey": "srcEventTimestamp",
+            "categoryKeys": [
+              "srcEventTimestamp",
+              "tls_version"
+            ],
+            "formatting": {
+              "metrics": [
+                {
+                  "formattingType": "off"
+                }
+              ],
+              "buckets": [
+                {
+                  "formattingType": "date",
+                  "formattingPattern": "yyyy-MM-dd HH:mm"
+                },
+                null
+              ]
+            },
+            "names": {
+              "metrics": [
+                {
+                  "custom": false,
+                  "value": "count(TLS Version)"
+                }
+              ],
+              "buckets": [
+                {
+                  "custom": false,
+                  "value": "Time"
+                },
+                {
+                  "custom": false,
+                  "value": "TLS Version"
+                }
+              ]
+            },
+            "colors": {
+              "metrics": [
+                {
+                  "useCustomColor": false,
+                  "useDefaultColor": true
+                }
+              ]
+            },
+            "thresholds": {
+              "metrics": [
+                null
+              ]
+            },
+            "areThresholdsAbsolute": {
+              "metrics": [
+                null
+              ]
+            },
+            "baselines": [],
+            "baselineMetrics": {},
+            "baselineKeys": [],
+            "defaultFilterStream": [
+              "suricata",
+              "suricata"
+            ],
+            "isCategoryDate": true,
+            "categoryDateInterval": "5m",
+            "autoBucket": true,
+            "timeKeys": [
+              "srcEventTimestamp"
+            ],
+            "splitKeys": [
+              "tls_version"
+            ],
+            "splitChartsKeys": [],
+            "splitSeriesKeys": [
+              "tls_version"
+            ],
+            "joinDataCategories": [
+              "srcEventTimestamp"
+            ],
+            "gridIndexes": [
+              0
+            ],
+            "markers": [
+              {
+                "maxMarker": {},
+                "minMarker": {},
+                "maxLine": {},
+                "minLine": {},
+                "avgLine": {}
+              }
+            ],
+            "stack": {
+              "metrics": [
+                "Type"
+              ]
+            },
+            "valueConfigs": {
+              "metrics": [
+                {
+                  "showLabels": false
+                }
+              ]
+            },
+            "active": {
+              "metrics": [
+                true
+              ]
+            },
+            "sort": "desc",
+            "includeTotal": {
+              "hidden": false
+            },
+            "type": "bar",
+            "hideTooMuchData": {
+              "active": true,
+              "value": 502,
+              "message": "To protect the browser performance, a limit of output records has been imposed on the widget. Please apply filters or narrow down the analysed time frame to display the results."
+            },
+            "hideTooMuchInputData": {
+              "active": false
+            },
+            "noData": {
+              "active": false
+            },
+            "animation": true,
+            "drilldown": [],
+            "showLocalQuerySwitch": false,
+            "displayValuesOnXAxis": false,
+            "yAxes": [
+              {
+                "series": [
+                  0
+                ],
+                "position": "default",
+                "useCustomName": false,
+                "showAxisLabels": true,
+                "axisLabelStyles": {
+                  "nameTextStyle": {
+                    "fontWeight": "normal",
+                    "fontSize": 12
+                  }
+                },
+                "width": 100,
+                "labelAngle": 0,
+                "labelPosition": "outside",
+                "forceAllLabels": false,
+                "formatting": {
+                  "formattingType": "off"
+                },
+                "logScale": false,
+                "inverse": false,
+                "barCategoryGapCustom": false,
+                "axisLine": {
+                  "custom": false
+                },
+                "splitLine": {
+                  "custom": false
+                },
+                "axisPointerConfig": {
+                  "show": false,
+                  "snap": false,
+                  "type": "shadow"
+                }
+              }
+            ],
+            "xAxes": [
+              {
+                "series": [
+                  0
+                ],
+                "position": "default",
+                "useCustomName": false,
+                "showAxisLabels": true,
+                "axisLabelStyles": {
+                  "nameTextStyle": {
+                    "fontWeight": "normal",
+                    "fontSize": 12
+                  }
+                },
+                "width": 100,
+                "labelAngle": 0,
+                "labelPosition": "outside",
+                "forceAllLabels": false,
+                "formatting": {
+                  "formattingType": "off"
+                },
+                "logScale": false,
+                "inverse": false,
+                "barCategoryGapCustom": false,
+                "axisLine": {
+                  "custom": false
+                },
+                "splitLine": {
+                  "custom": false
+                },
+                "axisPointerConfig": {
+                  "show": true,
+                  "snap": true,
+                  "type": "shadow"
+                }
+              }
+            ],
+            "showLegend": true,
+            "legendPosition": "top",
+            "showLegendMetricName": false,
+            "legendIcons": "radio",
+            "showInSingleMode": false,
+            "showSimpleChartTitle": true,
+            "chartAreaConfig": {
+              "active": false
+            }
+          }
+        },
+        "data": {
+          "dataMode": "advanced",
+          "source": {
+            "name": "suricata",
+            "type": "stream",
+            "isRaw": true,
+            "base": "suricata",
+            "resolution": ""
+          },
+          "query": {
+            "timerange": {
+              "from": "now-24hours",
+              "to": "now",
+              "roundTo": "hour"
+            },
+            "query": "",
+            "advanced": false
+          },
+          "outputQuery": {},
+          "aggs": {
+            "metrics": [
+              {
+                "metric": "tls_version",
+                "metricName": "TLS Version",
+                "useAggr": true,
+                "field": "tls_version",
+                "fieldType": "field",
+                "aggregation": "count",
+                "aggrParams": {},
+                "fn": {
+                  "aggr": "countTlsVersion=count(tls_version)",
+                  "postAggr": ""
+                },
+                "alias": "countTlsVersion",
+                "includeNullValues": true,
+                "includeZeroValues": true,
+                "includeEmptyValues": true
+              }
+            ],
+            "buckets": [
+              {
+                "aggregation": "timeAggr",
+                "bucket": "timestamp",
+                "field": "timestamp",
+                "alias": "srcEventTimestamp",
+                "preFn": "timestamp",
+                "autoBucket": true,
+                "interval": "5m",
+                "includeNullValues": true,
+                "includeZeroValues": true,
+                "includeEmptyValues": true,
+                "includeEmptyListValues": true,
+                "limit": {
+                  "active": true,
+                  "type": "top",
+                  "limit": 10,
+                  "byMetric": "",
+                  "byMetricSort": "desc",
+                  "byField": [],
+                  "inverted": false,
+                  "showOthers": false
+                },
+                "filterFn": {
+                  "custom": false
+                },
+                "unwindCollection": false,
+                "isCollectionFieldType": false,
+                "isNumberFieldType": false,
+                "isStringFieldType": false
+              },
+              {
+                "aggregation": "terms",
+                "useFn": false,
+                "bucket": "tls_version",
+                "field": "tls_version",
+                "alias": "tls_version",
+                "preFn": "tls_version",
+                "autoBucket": true,
+                "interval": "5m",
+                "includeNullValues": true,
+                "includeZeroValues": true,
+                "includeEmptyValues": true,
+                "includeEmptyListValues": true,
+                "limit": {
+                  "active": true,
+                  "type": "top",
+                  "limit": 10,
+                  "byMetric": "",
+                  "byMetricSort": "desc",
+                  "byField": [],
+                  "inverted": false,
+                  "showOthers": false
+                },
+                "filterFn": {
+                  "custom": false
+                },
+                "unwindCollection": false,
+                "isCollectionFieldType": false,
+                "isNumberFieldType": false,
+                "isStringFieldType": true,
+                "splitChart": false
+              }
+            ]
+          },
+          "sorters": [],
+          "limit": {
+            "active": true,
+            "limit": 100,
+            "from": "head",
+            "othersShow": false
+          },
+          "queries": [
+            {
+              "nql": "src event_type = \"tls\" | (valInColl(tls_version, \"47c4f15a-f9444603-812264be_0_tls_version_bucket-limit\", \"tls_version\") OR tls_version = null) | timeAggr countTlsVersion=count(tls_version) on timestamp by tls_version as tls_version interval=\"${AUTOBUCKET_INTERVAL}\" dir=\"desc\" unwind=true bucketAlias=\"srcEventTimestamp\" | limit 100",
+              "subpipes": [
+                {
+                  "nql": "${LIMIT_SOURCE} | neq(null, tls_version) | aggr countTlsVersion=count(tls_version) by tls_version as tls_version unwind=true | sort countTlsVersion desc | limit 10 | dst \"47c4f15a-f9444603-812264be_0_tls_version_bucket-limit\""
+                }
+              ]
+            }
+          ],
+          "includeTotal": {
+            "hidden": false
+          },
+          "columns": []
+        },
+        "version": 31,
+        "options": {},
+        "entitySet": "COMPONENT",
+        "entityType": "visualization",
+        "annotations": null,
+        "_qbId": "47c4f15a-f9444603-812264be",
+        "permissions": {
+          "entityId": "47c4f15a-f9444603-812264be",
+          "entityType": "COMPONENT.visualization",
+          "canAdd": true,
+          "canView": true,
+          "canEdit": true,
+          "canDelete": true,
+          "canExecute": true,
+          "canModifyOwner": true,
+          "canGrantPermissions": true
+        }
+      },
+      "style": {
+        "padding": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "layout": {
+        "id": "09d8bc76-76ca-47d0-b1f3-c0c726f0ae1a",
+        "header": null,
+        "w": 10,
+        "h": 6,
+        "x": 8,
+        "y": 12,
+        "moved": false,
+        "static": false
+      },
+      "config": {
+        "$ref": "098e98c4-a4fd4262-884a6ba0",
+        "id": "098e98c4-a4fd4262-884a6ba0",
+        "name": "Suricata - Top TLS SNI & JA3",
+        "type": "visualization",
+        "tags": null,
+        "createdBy": "admin",
+        "modifiedBy": "admin",
+        "created": 1770825045664,
+        "modified": 1770825045664,
+        "visualizationConfig": {
+          "type": "table",
+          "concreteVisualizationConfig": {
+            "dataKey": "tls_version",
+            "dataKeys": [
+              "tls_version",
+              "tls_ja3",
+              "tls_issuer",
+              "countTls"
+            ],
+            "categoryKey": "tls_sni",
+            "categoryKeys": [
+              "tls_sni"
+            ],
+            "formatting": {
+              "metrics": [
+                null,
+                null,
+                null,
+                {
+                  "formattingType": "off"
+                }
+              ],
+              "buckets": [
+                {
+                  "formattingType": "off"
+                }
+              ]
+            },
+            "names": {
+              "metrics": [
+                {
+                  "value": "first(tls_version)"
+                },
+                {
+                  "value": "first(tls_ja3)"
+                },
+                {
+                  "value": "first(tls_issuer)"
+                },
+                {
+                  "custom": false,
+                  "value": "count(tls_sni)"
+                }
+              ],
+              "buckets": [
+                {
+                  "custom": true,
+                  "value": "SNI"
+                }
+              ]
+            },
+            "colors": {
+              "metrics": [
+                {
+                  "useDefaultColor": true
+                },
+                {
+                  "useDefaultColor": true
+                },
+                {
+                  "useDefaultColor": true
+                },
+                {
+                  "useDefaultColor": true
+                }
+              ]
+            },
+            "thresholds": {
+              "metrics": [
+                null,
+                null,
+                null,
+                null
+              ]
+            },
+            "areThresholdsAbsolute": {
+              "metrics": [
+                null,
+                null,
+                null,
+                null
+              ]
+            },
+            "baselines": [],
+            "baselineMetrics": {},
+            "baselineKeys": [],
+            "defaultFilterStream": [
+              "suricata"
+            ],
+            "columns": [
+              {
+                "active": true,
+                "columnType": "bucket",
+                "alias": "tls_sni",
+                "aggregation": "terms",
+                "field": "tls_sni",
+                "fieldName": "tls_sni",
+                "useFn": false,
+                "isSavedField": false,
+                "fn": {},
+                "bucket": "tls_sni",
+                "preFn": "tls_sni",
+                "filterFn": {
+                  "custom": false
+                },
+                "isStringFieldType": true,
+                "isNumberFieldType": false,
+                "isCollectionFieldType": false,
+                "unwindCollection": false,
+                "autoBucket": true,
+                "interval": "5m",
+                "visualOptions": {
+                  "label": "SNI",
+                  "showLabel": true,
+                  "align": "left"
+                },
+                "formatting": {
+                  "formattingType": "off"
+                },
+                "defaultColAutoWidth": true,
+                "backgroundColor": {
+                  "useCustomColor": false
+                },
+                "foregroundColor": {
+                  "useCustomColor": false
+                },
+                "countBar": {
+                  "active": false
+                },
+                "includeNullValues": true,
+                "includeEmptyValues": true,
+                "includeEmptyListValues": true,
+                "includeZeroValues": true,
+                "limit": {
+                  "active": false
+                },
+                "showAddFilterButton": true,
+                "defaultFilterStream": "suricata",
+                "dataField": "tls_sni"
+              },
+              {
+                "active": true,
+                "columnType": "column",
+                "alias": "tls_version",
+                "field": "tls_version",
+                "fieldName": "tls_version",
+                "fieldType": "field",
+                "useFn": false,
+                "isSavedField": false,
+                "fn": {},
+                "preFn": "tls_version",
+                "column": "tls_version",
+                "visualOptions": {
+                  "label": "TLS Version",
+                  "showLabel": true,
+                  "align": "left"
+                },
+                "formatting": {
+                  "formattingType": "off"
+                },
+                "backgroundColor": {
+                  "useCustomColor": false
+                },
+                "foregroundColor": {
+                  "useCustomColor": false
+                },
+                "countBar": {
+                  "active": false
+                },
+                "includeNullValues": true,
+                "includeEmptyValues": true,
+                "includeEmptyListValues": true,
+                "includeZeroValues": true,
+                "limit": {
+                  "active": false
+                },
+                "showAddFilterButton": true,
+                "defaultFilterStream": "suricata",
+                "dataField": "tls_version",
+                "isStringFieldType": true,
+                "isCollectionFieldType": false,
+                "isNumberFieldType": false
+              },
+              {
+                "active": true,
+                "columnType": "column",
+                "alias": "tls_ja3",
+                "field": "tls_ja3",
+                "fieldName": "tls_ja3",
+                "fieldType": "field",
+                "useFn": false,
+                "isSavedField": false,
+                "fn": {},
+                "preFn": "tls_ja3",
+                "column": "tls_ja3",
+                "visualOptions": {
+                  "label": "JA3",
+                  "showLabel": true,
+                  "align": "left"
+                },
+                "formatting": {
+                  "formattingType": "off"
+                },
+                "backgroundColor": {
+                  "useCustomColor": false
+                },
+                "foregroundColor": {
+                  "useCustomColor": false
+                },
+                "countBar": {
+                  "active": false
+                },
+                "includeNullValues": true,
+                "includeEmptyValues": true,
+                "includeEmptyListValues": true,
+                "includeZeroValues": true,
+                "limit": {
+                  "active": false
+                },
+                "showAddFilterButton": true,
+                "defaultFilterStream": "suricata",
+                "dataField": "tls_ja3",
+                "isStringFieldType": true,
+                "isCollectionFieldType": false,
+                "isNumberFieldType": false
+              },
+              {
+                "active": true,
+                "columnType": "column",
+                "alias": "tls_issuer",
+                "field": "tls_issuer",
+                "fieldName": "tls_issuer",
+                "fieldType": "field",
+                "useFn": false,
+                "isSavedField": false,
+                "fn": {},
+                "preFn": "tls_issuer",
+                "column": "tls_issuer",
+                "visualOptions": {
+                  "label": "Issuer",
+                  "showLabel": true,
+                  "align": "left"
+                },
+                "formatting": {
+                  "formattingType": "off"
+                },
+                "backgroundColor": {
+                  "useCustomColor": false
+                },
+                "foregroundColor": {
+                  "useCustomColor": false
+                },
+                "countBar": {
+                  "active": false
+                },
+                "includeNullValues": true,
+                "includeEmptyValues": true,
+                "includeEmptyListValues": true,
+                "includeZeroValues": true,
+                "limit": {
+                  "active": false
+                },
+                "showAddFilterButton": true,
+                "defaultFilterStream": "suricata",
+                "dataField": "tls_issuer",
+                "isStringFieldType": true,
+                "isCollectionFieldType": false,
+                "isNumberFieldType": false
+              },
+              {
+                "active": true,
+                "columnType": "metric",
+                "metric": "tls_sni",
+                "alias": "countTls",
+                "aggregation": "count",
+                "useAggr": true,
+                "metricName": "SNI",
+                "field": "tls_sni",
+                "fieldName": "count(tls_sni)",
+                "fieldType": "field",
+                "aggrParams": {},
+                "fn": {
+                  "aggr": "countTls=count(tls_sni)",
+                  "postAggr": ""
+                },
+                "visualOptions": {
+                  "label": "count(tls_sni)",
+                  "showLabel": false,
+                  "align": "left"
+                },
+                "formatting": {
+                  "formattingType": "off"
+                },
+                "defaultColAutoWidth": false,
+                "backgroundColor": {
+                  "useCustomColor": false
+                },
+                "foregroundColor": {
+                  "useCustomColor": false
+                },
+                "metricBar": {
+                  "active": false
+                },
+                "includeNullValues": true,
+                "includeEmptyValues": true,
+                "includeEmptyListValues": true,
+                "includeZeroValues": true,
+                "limit": {
+                  "active": false
+                },
+                "showAddFilterButton": true,
+                "defaultFilterStream": "suricata",
+                "dataField": "countTls",
+                "isStringFieldType": true,
+                "isCollectionFieldType": false,
+                "isNumberFieldType": false
+              }
+            ],
+            "includeTotal": {
+              "active": false,
+              "hidden": false
+            },
+            "groupRowsByOrder": 1,
+            "type": "table",
+            "hideTooMuchData": {
+              "active": true,
+              "value": 502,
+              "message": "To protect the browser performance, a limit of output records has been imposed on the widget. Please apply filters or narrow down the analysed time frame to display the results."
+            },
+            "hideTooMuchInputData": {
+              "active": false
+            },
+            "noData": {
+              "active": false
+            },
+            "drilldown": [],
+            "showLocalQuerySwitch": false,
+            "globalFilter": true,
+            "filterable": true,
+            "sortable": true,
+            "displayValuesOnXAxis": false,
+            "rowGroupMode": null,
+            "groupRowsBy": null
+          }
+        },
+        "data": {
+          "dataMode": "advanced",
+          "source": {
+            "name": "suricata",
+            "type": "stream",
+            "isRaw": true,
+            "base": "suricata",
+            "resolution": ""
+          },
+          "query": {
+            "timerange": {
+              "from": "now-24hours",
+              "to": "now",
+              "roundTo": "hour"
+            },
+            "query": "",
+            "advanced": false
+          },
+          "outputQuery": {},
+          "aggs": {
+            "metrics": [
+              {
+                "metric": "tls_version",
+                "field": "tls_version",
+                "aggregation": "first",
+                "fn": {
+                  "aggr": "tls_version=first(tls_version)"
+                },
+                "alias": "tls_version"
+              },
+              {
+                "metric": "tls_ja3",
+                "field": "tls_ja3",
+                "aggregation": "first",
+                "fn": {
+                  "aggr": "tls_ja3=first(tls_ja3)"
+                },
+                "alias": "tls_ja3"
+              },
+              {
+                "metric": "tls_issuer",
+                "field": "tls_issuer",
+                "aggregation": "first",
+                "fn": {
+                  "aggr": "tls_issuer=first(tls_issuer)"
+                },
+                "alias": "tls_issuer"
+              },
+              {
+                "metric": "tls_sni",
+                "metricName": "SNI",
+                "useAggr": true,
+                "field": "tls_sni",
+                "fieldType": "field",
+                "aggregation": "count",
+                "aggrParams": {},
+                "fn": {
+                  "aggr": "countTls=count(tls_sni)",
+                  "postAggr": ""
+                },
+                "alias": "countTls",
+                "includeNullValues": true,
+                "includeZeroValues": true,
+                "includeEmptyValues": true
+              }
+            ],
+            "buckets": [
+              {
+                "aggregation": "terms",
+                "useFn": false,
+                "bucket": "tls_sni",
+                "field": "tls_sni",
+                "alias": "tls_sni",
+                "preFn": "tls_sni",
+                "autoBucket": true,
+                "interval": "5m",
+                "includeNullValues": true,
+                "includeZeroValues": true,
+                "includeEmptyValues": true,
+                "includeEmptyListValues": true,
+                "limit": {
+                  "active": false
+                },
+                "filterFn": {
+                  "custom": false
+                },
+                "unwindCollection": false,
+                "isCollectionFieldType": false,
+                "isNumberFieldType": false,
+                "isStringFieldType": true
+              }
+            ]
+          },
+          "sorters": [
+            {
+              "field": "countTls",
+              "direction": "desc",
+              "description": "count(tls_sni) (desc)"
+            }
+          ],
+          "limit": {
+            "active": true,
+            "limit": 50,
+            "from": "head",
+            "othersShow": false
+          },
+          "queries": [
+            {
+              "nql": "src event_type = \"tls\" | aggr tls_version=first(tls_version), tls_ja3=first(tls_ja3), tls_issuer=first(tls_issuer), countTls=count(tls_sni) by tls_sni as tls_sni | sort countTls desc | limit 50",
+              "subpipes": []
+            }
+          ],
+          "columns": [
+            {
+              "active": true,
+              "columnType": "bucket",
+              "alias": "tls_sni",
+              "aggregation": "terms",
+              "field": "tls_sni",
+              "fieldName": "tls_sni",
+              "useFn": false,
+              "isSavedField": false,
+              "fn": {},
+              "bucket": "tls_sni",
+              "preFn": "tls_sni",
+              "filterFn": {
+                "custom": false
+              },
+              "isStringFieldType": true,
+              "isNumberFieldType": false,
+              "isCollectionFieldType": false,
+              "unwindCollection": false,
+              "autoBucket": true,
+              "interval": "5m",
+              "visualOptions": {
+                "label": "SNI",
+                "showLabel": true,
+                "align": "left"
+              },
+              "formatting": {
+                "formattingType": "off"
+              },
+              "defaultColAutoWidth": true,
+              "backgroundColor": {
+                "useCustomColor": false
+              },
+              "foregroundColor": {
+                "useCustomColor": false
+              },
+              "countBar": {
+                "active": false
+              },
+              "includeNullValues": true,
+              "includeEmptyValues": true,
+              "includeEmptyListValues": true,
+              "includeZeroValues": true,
+              "limit": {
+                "active": false
+              },
+              "showAddFilterButton": true,
+              "defaultFilterStream": "suricata",
+              "dataField": "tls_sni"
+            },
+            {
+              "active": true,
+              "columnType": "column",
+              "alias": "tls_version",
+              "field": "tls_version",
+              "fieldName": "tls_version",
+              "fieldType": "field",
+              "useFn": false,
+              "isSavedField": false,
+              "fn": {},
+              "preFn": "tls_version",
+              "column": "tls_version",
+              "visualOptions": {
+                "label": "TLS Version",
+                "showLabel": true,
+                "align": "left"
+              },
+              "formatting": {
+                "formattingType": "off"
+              },
+              "backgroundColor": {
+                "useCustomColor": false
+              },
+              "foregroundColor": {
+                "useCustomColor": false
+              },
+              "countBar": {
+                "active": false
+              },
+              "includeNullValues": true,
+              "includeEmptyValues": true,
+              "includeEmptyListValues": true,
+              "includeZeroValues": true,
+              "limit": {
+                "active": false
+              },
+              "showAddFilterButton": true,
+              "defaultFilterStream": "suricata",
+              "dataField": "tls_version",
+              "isStringFieldType": true,
+              "isCollectionFieldType": false,
+              "isNumberFieldType": false
+            },
+            {
+              "active": true,
+              "columnType": "column",
+              "alias": "tls_ja3",
+              "field": "tls_ja3",
+              "fieldName": "tls_ja3",
+              "fieldType": "field",
+              "useFn": false,
+              "isSavedField": false,
+              "fn": {},
+              "preFn": "tls_ja3",
+              "column": "tls_ja3",
+              "visualOptions": {
+                "label": "JA3",
+                "showLabel": true,
+                "align": "left"
+              },
+              "formatting": {
+                "formattingType": "off"
+              },
+              "backgroundColor": {
+                "useCustomColor": false
+              },
+              "foregroundColor": {
+                "useCustomColor": false
+              },
+              "countBar": {
+                "active": false
+              },
+              "includeNullValues": true,
+              "includeEmptyValues": true,
+              "includeEmptyListValues": true,
+              "includeZeroValues": true,
+              "limit": {
+                "active": false
+              },
+              "showAddFilterButton": true,
+              "defaultFilterStream": "suricata",
+              "dataField": "tls_ja3",
+              "isStringFieldType": true,
+              "isCollectionFieldType": false,
+              "isNumberFieldType": false
+            },
+            {
+              "active": true,
+              "columnType": "column",
+              "alias": "tls_issuer",
+              "field": "tls_issuer",
+              "fieldName": "tls_issuer",
+              "fieldType": "field",
+              "useFn": false,
+              "isSavedField": false,
+              "fn": {},
+              "preFn": "tls_issuer",
+              "column": "tls_issuer",
+              "visualOptions": {
+                "label": "Issuer",
+                "showLabel": true,
+                "align": "left"
+              },
+              "formatting": {
+                "formattingType": "off"
+              },
+              "backgroundColor": {
+                "useCustomColor": false
+              },
+              "foregroundColor": {
+                "useCustomColor": false
+              },
+              "countBar": {
+                "active": false
+              },
+              "includeNullValues": true,
+              "includeEmptyValues": true,
+              "includeEmptyListValues": true,
+              "includeZeroValues": true,
+              "limit": {
+                "active": false
+              },
+              "showAddFilterButton": true,
+              "defaultFilterStream": "suricata",
+              "dataField": "tls_issuer",
+              "isStringFieldType": true,
+              "isCollectionFieldType": false,
+              "isNumberFieldType": false
+            },
+            {
+              "active": true,
+              "columnType": "metric",
+              "metric": "tls_sni",
+              "alias": "countTls",
+              "aggregation": "count",
+              "useAggr": true,
+              "metricName": "SNI",
+              "field": "tls_sni",
+              "fieldName": "count(tls_sni)",
+              "fieldType": "field",
+              "aggrParams": {},
+              "fn": {
+                "aggr": "countTls=count(tls_sni)",
+                "postAggr": ""
+              },
+              "visualOptions": {
+                "label": "count(tls_sni)",
+                "showLabel": false,
+                "align": "left"
+              },
+              "formatting": {
+                "formattingType": "off"
+              },
+              "defaultColAutoWidth": false,
+              "backgroundColor": {
+                "useCustomColor": false
+              },
+              "foregroundColor": {
+                "useCustomColor": false
+              },
+              "metricBar": {
+                "active": false
+              },
+              "includeNullValues": true,
+              "includeEmptyValues": true,
+              "includeEmptyListValues": true,
+              "includeZeroValues": true,
+              "limit": {
+                "active": false
+              },
+              "showAddFilterButton": true,
+              "defaultFilterStream": "suricata",
+              "dataField": "countTls",
+              "isStringFieldType": true,
+              "isCollectionFieldType": false,
+              "isNumberFieldType": false
+            }
+          ],
+          "includeTotal": {
+            "active": false,
+            "hidden": false
+          }
+        },
+        "version": 31,
+        "options": {},
+        "entitySet": "COMPONENT",
+        "entityType": "visualization",
+        "annotations": null,
+        "_qbId": "098e98c4-a4fd4262-884a6ba0",
+        "permissions": {
+          "entityId": "098e98c4-a4fd4262-884a6ba0",
+          "entityType": "COMPONENT.visualization",
+          "canAdd": true,
+          "canView": true,
+          "canEdit": true,
+          "canDelete": true,
+          "canExecute": true,
+          "canModifyOwner": true,
+          "canGrantPermissions": true
+        }
+      },
+      "style": {
+        "padding": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    {
+      "layout": {
+        "id": "99cb7d91-17fb-474e-bd8f-818bdadc4d10",
+        "header": null,
+        "w": 6,
+        "h": 6,
+        "x": 18,
+        "y": 12,
+        "moved": false,
+        "static": false
+      },
+      "config": {
+        "$ref": "1e1e6c98-39224e90-b74ba80d",
+        "id": "1e1e6c98-39224e90-b74ba80d",
+        "name": "Suricata - TLS Versions",
+        "type": "visualization",
+        "tags": null,
+        "createdBy": "admin",
+        "modifiedBy": "admin",
+        "created": 1770825045664,
+        "modified": 1770825045664,
+        "visualizationConfig": {
+          "type": "chart",
+          "concreteVisualizationConfig": {
+            "dataKey": "countVersion",
+            "dataKeys": [
+              "countVersion"
+            ],
+            "categoryKey": "tls_version",
+            "categoryKeys": [
+              "tls_version"
+            ],
+            "formatting": {
+              "metrics": [
+                {
+                  "formattingType": "off"
+                }
+              ],
+              "buckets": [
+                {
+                  "formattingType": "off"
+                }
+              ]
+            },
+            "names": {
+              "metrics": [
+                {
+                  "custom": false,
+                  "value": "count(TLS Version)"
+                }
+              ],
+              "buckets": [
+                {
+                  "custom": false,
+                  "value": "TLS Version"
+                }
+              ]
+            },
+            "colors": {
+              "metrics": [
+                {
+                  "useCustomColor": false,
+                  "useDefaultColor": true
+                }
+              ]
+            },
+            "thresholds": {
+              "metrics": [
+                null
+              ]
+            },
+            "areThresholdsAbsolute": {
+              "metrics": [
+                null
+              ]
+            },
+            "baselines": [],
+            "baselineMetrics": {},
+            "baselineKeys": [],
+            "defaultFilterStream": [
+              "suricata"
+            ],
+            "isCategoryDate": false,
+            "categoryDateInterval": "5m",
+            "autoBucket": false,
+            "timeKeys": [],
+            "splitKeys": [],
+            "splitChartsKeys": [],
+            "splitSeriesKeys": [],
+            "joinDataCategories": [],
+            "gridIndexes": [
+              0
+            ],
+            "markers": [
+              {
+                "maxMarker": {},
+                "minMarker": {},
+                "maxLine": {},
+                "minLine": {},
+                "avgLine": {}
+              }
+            ],
+            "stack": {
+              "metrics": [
+                null
+              ]
+            },
+            "valueConfigs": {
+              "metrics": [
+                {
+                  "showLabels": false
+                }
+              ]
+            },
+            "active": {
+              "metrics": [
+                true
+              ]
+            },
+            "sort": "desc",
+            "includeTotal": {
+              "hidden": false
+            },
+            "type": "pie",
+            "hideTooMuchData": {
+              "active": true,
+              "value": 502,
+              "message": "To protect the browser performance, a limit of output records has been imposed on the widget. Please apply filters or narrow down the analysed time frame to display the results."
+            },
+            "hideTooMuchInputData": {
+              "active": false
+            },
+            "noData": {
+              "active": false
+            },
+            "animation": true,
+            "drilldown": [],
+            "showLocalQuerySwitch": false,
+            "displayValuesOnXAxis": false,
+            "yAxes": [
+              {
+                "series": [
+                  0
+                ],
+                "position": "default",
+                "useCustomName": false,
+                "showAxisLabels": true,
+                "axisLabelStyles": {
+                  "nameTextStyle": {
+                    "fontWeight": "normal",
+                    "fontSize": 12
+                  }
+                },
+                "width": 100,
+                "labelAngle": 0,
+                "labelPosition": "outside",
+                "forceAllLabels": false,
+                "formatting": {
+                  "formattingType": "off"
+                },
+                "logScale": false,
+                "inverse": false,
+                "barCategoryGapCustom": false,
+                "axisLine": {
+                  "custom": false
+                },
+                "splitLine": {
+                  "custom": false
+                },
+                "axisPointerConfig": {
+                  "show": false,
+                  "snap": false,
+                  "type": "shadow"
+                }
+              }
+            ],
+            "xAxes": [
+              {
+                "series": [
+                  0
+                ],
+                "position": "default",
+                "useCustomName": false,
+                "showAxisLabels": true,
+                "axisLabelStyles": {
+                  "nameTextStyle": {
+                    "fontWeight": "normal",
+                    "fontSize": 12
+                  }
+                },
+                "width": 100,
+                "labelAngle": 0,
+                "labelPosition": "outside",
+                "forceAllLabels": false,
+                "formatting": {
+                  "formattingType": "off"
+                },
+                "logScale": false,
+                "inverse": false,
+                "barCategoryGapCustom": false,
+                "axisLine": {
+                  "custom": false
+                },
+                "splitLine": {
+                  "custom": false
+                },
+                "axisPointerConfig": {
+                  "show": true,
+                  "snap": true,
+                  "type": "shadow"
+                }
+              }
+            ],
+            "showLegend": true,
+            "legendPosition": "top",
+            "showLegendMetricName": false,
+            "legendIcons": "radio",
+            "showInSingleMode": false,
+            "showSimpleChartTitle": true,
+            "chartAreaConfig": {
+              "active": false
+            }
+          }
+        },
+        "data": {
+          "dataMode": "advanced",
+          "source": {
+            "name": "suricata",
+            "type": "stream",
+            "isRaw": true,
+            "base": "suricata",
+            "resolution": ""
+          },
+          "query": {
+            "timerange": {
+              "from": "now-24hours",
+              "to": "now",
+              "roundTo": "hour"
+            },
+            "query": "",
+            "advanced": false
+          },
+          "outputQuery": {},
+          "aggs": {
+            "metrics": [
+              {
+                "metric": "tls_version",
+                "metricName": "TLS Version",
+                "useAggr": true,
+                "field": "tls_version",
+                "fieldType": "field",
+                "aggregation": "count",
+                "aggrParams": {},
+                "fn": {
+                  "aggr": "countVersion=count(tls_version)",
+                  "postAggr": ""
+                },
+                "alias": "countVersion",
+                "includeNullValues": true,
+                "includeZeroValues": true,
+                "includeEmptyValues": true
+              }
+            ],
+            "buckets": [
+              {
+                "aggregation": "terms",
+                "useFn": false,
+                "bucket": "tls_version",
+                "field": "tls_version",
+                "alias": "tls_version",
+                "preFn": "tls_version",
+                "autoBucket": true,
+                "interval": "5m",
+                "includeNullValues": true,
+                "includeZeroValues": true,
+                "includeEmptyValues": true,
+                "includeEmptyListValues": true,
+                "limit": {
+                  "active": false
+                },
+                "filterFn": {
+                  "custom": false
+                },
+                "unwindCollection": false,
+                "isCollectionFieldType": false,
+                "isNumberFieldType": false,
+                "isStringFieldType": true
+              }
+            ]
+          },
+          "sorters": [],
+          "limit": {
+            "active": true,
+            "limit": 10,
+            "from": "head",
+            "othersShow": false
+          },
+          "queries": [
+            {
+              "nql": "src event_type = \"tls\" | aggr countVersion=count(tls_version) by tls_version as tls_version | sort countVersion desc | limit 10",
+              "subpipes": []
+            }
+          ],
+          "includeTotal": {
+            "hidden": false
+          },
+          "columns": []
+        },
+        "version": 31,
+        "options": {},
+        "entitySet": "COMPONENT",
+        "entityType": "visualization",
+        "annotations": null,
+        "_qbId": "1e1e6c98-39224e90-b74ba80d",
+        "permissions": {
+          "entityId": "1e1e6c98-39224e90-b74ba80d",
+          "entityType": "COMPONENT.visualization",
+          "canAdd": true,
+          "canView": true,
+          "canEdit": true,
+          "canDelete": true,
+          "canExecute": true,
+          "canModifyOwner": true,
+          "canGrantPermissions": true
+        }
+      },
+      "style": {
+        "padding": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        }
+      }
+    }
+  ],
+  "version": 5,
+  "descriptionDefaultShow": true,
+  "acl": {
+    "permissions": [],
+    "privacy": "public",
+    "publicPermissions": [],
+    "entityId": "c118dba3-928a43bf-a119869e",
+    "entityType": "COMPONENT.dashboard",
+    "owner": "admin",
+    "availPerms": [
+      "VIEW",
+      "EDIT",
+      "ADD",
+      "DELETE",
+      "EXECUTE",
+      "MODIFY_OWNERSHIP",
+      "GRANT_PERMISSIONS"
+    ],
+    "isOwner": true,
+    "aclEdit": true
+  },
+  "entitySet": "COMPONENT",
+  "entityType": "dashboard",
+  "annotations": null,
+  "permissions": {
+    "entityId": "c118dba3-928a43bf-a119869e",
+    "entityType": "COMPONENT.dashboard",
+    "canAdd": true,
+    "canView": true,
+    "canEdit": true,
+    "canDelete": true,
+    "canExecute": true,
+    "canModifyOwner": true,
+    "canGrantPermissions": true
+  },
+  "aclEdit": true
+}
